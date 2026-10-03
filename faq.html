@@ -1,0 +1,607 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Frequently Asked Questions | Trove Beauty Co.</title>
+
+<meta name="description" content="Find answers about Trove Beauty Co. products, orders, shipping, returns, payments and customer support.">
+
+<link rel="canonical" href="https://website.thetradetrove.com/faq.html">
+
+<meta property="og:title" content="Frequently Asked Questions | Trove Beauty Co.">
+<meta property="og:description" content="Answers about products, orders, shipping, returns and customer support at Trove Beauty Co.">
+<meta property="og:url" content="https://website.thetradetrove.com/faq.html">
+<meta property="og:type" content="website">
+
+<style>
+:root {
+  --ink:#29231f;
+  --paper:#faf8f4;
+  --rose:#95685d;
+  --line:#e7dfd6;
+  --muted:#766e67;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,sans-serif;
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+/* TOP BAR */
+
+.top {
+  background:var(--ink);
+  color:white;
+  text-align:center;
+  padding:9px;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+/* HEADER */
+
+header {
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  padding:20px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.logo {
+  font-size:17px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+.logo span {
+  color:var(--rose);
+}
+
+nav {
+  display:flex;
+  gap:20px;
+  font-size:12px;
+}
+
+nav a:hover {
+  color:var(--rose);
+}
+
+/* HERO */
+
+.hero {
+  background:#eee5dc;
+  padding:75px 20px;
+  text-align:center;
+}
+
+.eyebrow {
+  color:var(--rose);
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+h1,
+h2 {
+  font-family:Georgia,serif;
+  font-weight:400;
+}
+
+h1 {
+  font-size:clamp(40px,7vw,65px);
+  margin:15px 0;
+}
+
+.hero p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* FAQ */
+
+.container {
+  width:min(900px,92%);
+  margin:auto;
+}
+
+.faq-section {
+  padding:60px 0 80px;
+}
+
+.faq-intro {
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.faq-intro h2 {
+  font-size:38px;
+  margin:12px 0;
+}
+
+.faq-intro p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+  max-width:650px;
+  margin:auto;
+}
+
+/* FAQ ITEMS */
+
+.faq-list {
+  border-top:1px solid var(--line);
+}
+
+.faq-item {
+  background:white;
+  border-bottom:1px solid var(--line);
+}
+
+.faq-question {
+  width:100%;
+  border:0;
+  background:white;
+  color:var(--ink);
+  padding:22px 20px;
+  text-align:left;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.faq-question:hover {
+  color:var(--rose);
+}
+
+.faq-icon {
+  font-size:20px;
+  font-weight:400;
+  flex-shrink:0;
+}
+
+.faq-answer {
+  display:none;
+  padding:0 20px 22px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+.faq-item.open .faq-answer {
+  display:block;
+}
+
+.faq-item.open .faq-icon {
+  transform:rotate(45deg);
+}
+
+/* CONTACT NOTE */
+
+.note {
+  background:#eee5dc;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.note h2 {
+  font-size:32px;
+  margin:15px 0;
+}
+
+.note p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+.button {
+  display:inline-block;
+  margin-top:10px;
+  background:var(--ink);
+  color:white;
+  border:1px solid var(--ink);
+  padding:13px 22px;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.button:hover {
+  background:var(--rose);
+  border-color:var(--rose);
+}
+
+/* FOOTER */
+
+footer {
+  background:var(--ink);
+  color:white;
+  padding:40px 5%;
+  text-align:center;
+  font-size:11px;
+}
+
+footer p {
+  color:#c9c0b8;
+  line-height:1.7;
+}
+
+footer a:hover {
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+  header {
+    flex-wrap:wrap;
+  }
+
+  nav {
+    width:100%;
+    justify-content:space-between;
+    gap:8px;
+  }
+
+  nav a {
+    font-size:10px;
+  }
+
+  .hero {
+    padding:55px 15px;
+  }
+
+  .faq-section {
+    padding:45px 0 60px;
+  }
+
+  .faq-intro h2 {
+    font-size:32px;
+  }
+
+  .faq-question {
+    padding:19px 15px;
+    font-size:13px;
+  }
+
+  .faq-answer {
+    padding:0 15px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP ANNOUNCEMENT -->
+
+<div class="top">
+THOUGHTFUL BEAUTY FINDS • EVERYDAY SELF-CARE
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<a class="logo" href="https://website.thetradetrove.com/">
+TROVE <span>BEAUTY CO.</span>
+</a>
+
+<nav>
+<a href="https://website.thetradetrove.com/">HOME</a>
+<a href="shop.html">SHOP</a>
+<a href="about.html">ABOUT</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="eyebrow">
+Help & Information
+</div>
+
+<h1>Frequently Asked Questions.</h1>
+
+<p>
+A few helpful answers about shopping, shipping, returns and
+your experience with Trove Beauty Co.
+</p>
+
+</section>
+
+<!-- FAQ -->
+
+<main class="container faq-section">
+
+<div class="faq-intro">
+
+<div class="eyebrow">
+Need a little help?
+</div>
+
+<h2>How Can We Help?</h2>
+
+<p>
+We've gathered some of the questions customers may have
+when exploring Trove Beauty Co. If you still need help,
+please contact our customer care team.
+</p>
+
+</div>
+
+<div class="faq-list">
+
+<!-- QUESTION 1 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>What does Trove Beauty Co. sell?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Trove Beauty Co. features makeup, beauty tools, hair care,
+self-care products and everyday beauty essentials. Product
+availability may change as our collection develops.
+</div>
+
+</div>
+
+<!-- QUESTION 2 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>Are all products available for purchase?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+The current website is a store preview. Product listings and
+prices shown on the website may be used for demonstration
+purposes while the live ecommerce checkout is being prepared.
+</div>
+
+</div>
+
+<!-- QUESTION 3 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>How long does shipping take?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Shipping times depend on the product, fulfillment location
+and destination. Please review the Shipping page for the
+latest shipping information and delivery expectations.
+</div>
+
+</div>
+
+<!-- QUESTION 4 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>Do you offer returns?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Our return information is provided on the Returns & Refunds
+page. Please review the applicable conditions before sending
+a return request.
+</div>
+
+</div>
+
+<!-- QUESTION 5 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>What payment methods do you accept?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+Payment methods will depend on the live checkout system
+connected to the store. The current GitHub website is a
+store preview and does not process live payments directly.
+</div>
+
+</div>
+
+<!-- QUESTION 6 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>Can I cancel or change my order?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+If an order has been placed through a future live checkout,
+please contact customer support as soon as possible. Changes
+or cancellations may depend on whether the order has already
+entered fulfillment.
+</div>
+
+</div>
+
+<!-- QUESTION 7 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>How can I contact Trove Beauty Co.?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+You can contact Trove Beauty Co. through our Contact page.
+Our customer contact email is
+contacts@thetradetrove.com.
+</div>
+
+</div>
+
+<!-- QUESTION 8 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>Is the website checkout currently live?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+No. The current GitHub Pages website is a store preview.
+The product catalog and interface are being prepared, but
+live cart, payment processing and order fulfillment are not
+connected to this website yet.
+</div>
+
+</div>
+
+<!-- QUESTION 9 -->
+
+<div class="faq-item">
+
+<button class="faq-question">
+<span>Where can I find your policies?</span>
+<span class="faq-icon">+</span>
+</button>
+
+<div class="faq-answer">
+You can review our Privacy Policy, Terms & Conditions,
+Shipping Policy, Returns & Refunds Policy and Legal Notice
+through the links in the website footer.
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+<!-- NOTE -->
+
+<section class="note">
+
+<div class="eyebrow">
+Still Have Questions?
+</div>
+
+<h2>We're Here to Help.</h2>
+
+<p>
+If you couldn't find the answer you were looking for,
+please reach out to Trove Beauty Co.
+</p>
+
+<a class="button" href="contact.html">
+Contact Us
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<strong>TROVE BEAUTY CO.</strong>
+
+<p>
+Beauty • Self-Care • Everyday Essentials
+</p>
+
+<p>
+<a href="https://www.instagram.com/trovebeautyco/">
+Instagram @trovebeautyco
+</a>
+</p>
+
+<p>
+<a href="privacy.html">Privacy</a>
+&nbsp; • &nbsp;
+<a href="terms.html">Terms</a>
+&nbsp; • &nbsp;
+<a href="shipping.html">Shipping</a>
+&nbsp; • &nbsp;
+<a href="returns.html">Returns</a>
+&nbsp; • &nbsp;
+<a href="legal.html">Legal Notice</a>
+</p>
+
+<p>
+© <span id="year"></span> Trove Beauty Co.
+</p>
+
+<p>
+Store preview — live checkout is not connected.
+</p>
+
+</footer>
+
+<!-- FAQ SCRIPT -->
+
+<script>
+
+document.querySelectorAll(".faq-question").forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    const item = button.parentElement;
+
+    item.classList.toggle("open");
+
+  });
+
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+```

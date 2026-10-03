@@ -1,799 +1,153 @@
-
+```html
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Search Beauty Products | Trove Beauty Co.</title>
-
-<meta name="description" content="Search makeup, beauty tools, hair care and self-care products at Trove Beauty Co.">
-
-<link rel="canonical" href="https://website.thetradetrove.com/search.html">
-
-<meta property="og:title" content="Search Beauty Products | Trove Beauty Co.">
-<meta property="og:description" content="Search beauty, self-care, hair care and beauty tools at Trove Beauty Co.">
-<meta property="og:url" content="https://website.thetradetrove.com/search.html">
-<meta property="og:type" content="website">
-
-<style>
-:root {
-  --ink:#29231f;
-  --paper:#faf8f4;
-  --rose:#95685d;
-  --line:#e7dfd6;
-  --muted:#766e67;
-}
-
-* {
-  box-sizing:border-box;
-}
-
-body {
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:Arial,sans-serif;
-}
-
-a {
-  color:inherit;
-  text-decoration:none;
-}
-
-/* TOP BAR */
-
-.top {
-  background:var(--ink);
-  color:white;
-  text-align:center;
-  padding:9px;
-  font-size:11px;
-  letter-spacing:1px;
-}
-
-/* HEADER */
-
-header {
-  background:var(--paper);
-  border-bottom:1px solid var(--line);
-  padding:20px 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:15px;
-}
-
-.logo {
-  font-size:17px;
-  font-weight:bold;
-  letter-spacing:1px;
-}
-
-.logo span {
-  color:var(--rose);
-}
-
-nav {
-  display:flex;
-  gap:20px;
-  font-size:12px;
-}
-
-nav a:hover {
-  color:var(--rose);
-}
-
-/* HERO */
-
-.hero {
-  background:#eee5dc;
-  padding:70px 20px;
-  text-align:center;
-}
-
-.eyebrow {
-  color:var(--rose);
-  font-size:11px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-}
-
-h1,
-h2 {
-  font-family:Georgia,serif;
-  font-weight:400;
-}
-
-h1 {
-  font-size:clamp(40px,7vw,65px);
-  margin:15px 0;
-}
-
-.hero p {
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.7;
-}
-
-/* SEARCH */
-
-.container {
-  width:min(1180px,92%);
-  margin:auto;
-}
-
-.search-section {
-  padding:55px 0 80px;
-}
-
-.search-box {
-  max-width:760px;
-  margin:0 auto 35px;
-  position:relative;
-}
-
-.search-box input {
-  width:100%;
-  padding:17px 52px 17px 18px;
-  border:1px solid var(--line);
-  background:white;
-  color:var(--ink);
-  font-size:14px;
-  outline:none;
-}
-
-.search-box input:focus {
-  border-color:var(--rose);
-}
-
-.search-icon {
-  position:absolute;
-  right:18px;
-  top:50%;
-  transform:translateY(-50%);
-  color:var(--rose);
-  font-size:20px;
-  pointer-events:none;
-}
-
-/* FILTERS */
-
-.filters {
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:10px;
-  margin:25px 0 35px;
-}
-
-.filters button {
-  border:1px solid var(--line);
-  background:white;
-  padding:11px 17px;
-  cursor:pointer;
-  font-size:11px;
-}
-
-.filters button.active,
-.filters button:hover {
-  background:var(--ink);
-  color:white;
-}
-
-/* RESULTS */
-
-.results-info {
-  text-align:center;
-  color:var(--muted);
-  font-size:12px;
-  margin-bottom:25px;
-}
-
-/* PRODUCT GRID */
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px 16px;
-}
-
-.product {
-  background:white;
-  padding-bottom:14px;
-}
-
-.product img {
-  width:100%;
-  aspect-ratio:4/5;
-  object-fit:cover;
-  background:#eee9e2;
-}
-
-.info {
-  padding:12px;
-}
-
-.source {
-  color:var(--rose);
-  font-size:9px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.info h3 {
-  font-size:13px;
-  margin:7px 0;
-}
-
-.category {
-  color:var(--muted);
-  font-size:11px;
-}
-
-.price {
-  font-weight:bold;
-  margin:10px 0;
-  font-size:14px;
-}
-
-.add {
-  width:100%;
-  background:var(--ink);
-  color:white;
-  border:0;
-  padding:12px;
-  cursor:pointer;
-  font-size:10px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-
-.add:hover {
-  background:var(--rose);
-}
-
-/* NO RESULTS */
-
-.no-results {
-  display:none;
-  text-align:center;
-  padding:55px 20px;
-  background:white;
-  border:1px solid var(--line);
-}
-
-.no-results h2 {
-  font-size:30px;
-  margin:10px 0;
-}
-
-.no-results p {
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* NOTE */
-
-.note {
-  background:#eee5dc;
-  text-align:center;
-  padding:45px 20px;
-  margin-top:30px;
-}
-
-.note h2 {
-  font-size:32px;
-}
-
-.note p {
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* FOOTER */
-
-footer {
-  background:var(--ink);
-  color:white;
-  padding:40px 5%;
-  text-align:center;
-  font-size:11px;
-}
-
-footer p {
-  color:#c9c0b8;
-}
-
-footer a:hover {
-  color:white;
-}
-
-/* MOBILE */
-
-@media(max-width:850px) {
-
-  .grid {
-    grid-template-columns:repeat(2,1fr);
-  }
-
-}
-
-@media(max-width:600px) {
-
-  header {
-    flex-wrap:wrap;
-  }
-
-  nav {
-    width:100%;
-    justify-content:space-between;
-    gap:8px;
-  }
-
-  nav a {
-    font-size:10px;
-  }
-
-  .hero {
-    padding:55px 15px;
-  }
-
-  .search-section {
-    padding:45px 0 60px;
-  }
-
-  .grid {
-    gap:12px;
-  }
-
-  .info {
-    padding:9px;
-  }
-
-  .info h3 {
-    font-size:12px;
-  }
-
-}
-</style>
-</head>
-
-<body>
-
-<!-- TOP BAR -->
-
-<div class="top">
-THOUGHTFUL BEAUTY FINDS • EVERYDAY SELF-CARE
-</div>
-
-<!-- HEADER -->
-
-<header>
-
-<a class="logo" href="https://website.thetradetrove.com/">
-TROVE <span>BEAUTY CO.</span>
-</a>
-
-<nav>
-<a href="https://website.thetradetrove.com/">HOME</a>
-<a href="shop.html">SHOP</a>
-<a href="about.html">ABOUT</a>
-<a href="contact.html">CONTACT</a>
-</nav>
-
-</header>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="eyebrow">
-Find Your Trove
-</div>
-
-<h1>Search Beauty.</h1>
-
-<p>
-Find makeup, beauty tools, hair care and everyday
-self-care discoveries.
-</p>
-
-</section>
-
-<!-- SEARCH AREA -->
-
-<main class="container search-section">
-
-<div class="eyebrow" style="text-align:center">
-Explore the collection
-</div>
-
-<h2 style="text-align:center;font-size:38px">
-Find Your Favorites
-</h2>
-
-<!-- SEARCH BOX -->
-
-<div class="search-box">
-
-<input
-  type="search"
-  id="searchInput"
-  placeholder="Search products..."
-  autocomplete="off"
-  aria-label="Search products"
->
-
-<div class="search-icon">
-⌕
-</div>
-
-</div>
-
-<!-- FILTERS -->
-
-<div class="filters">
-
-<button class="active" data-filter="All">
-All Products
-</button>
-
-<button data-filter="Makeup">
-Makeup
-</button>
-
-<button data-filter="Beauty Tools">
-Beauty Tools
-</button>
-
-<button data-filter="Hair Care">
-Hair Care
-</button>
-
-<button data-filter="Self-Care">
-Self-Care
-</button>
-
-</div>
-
-<!-- RESULT COUNT -->
-
-<div class="results-info" id="resultsInfo">
-Showing all products
-</div>
-
-<!-- PRODUCT GRID -->
-
-<div class="grid" id="products"></div>
-
-<!-- NO RESULTS -->
-
-<div class="no-results" id="noResults">
-
-<div class="eyebrow">
-Nothing Found
-</div>
-
-<h2>We couldn't find that one.</h2>
-
-<p>
-Try another product name or choose a different category.
-</p>
-
-</div>
-
-</main>
-
-<!-- NOTE -->
-
-<section class="note">
-
-<div class="eyebrow">
-A Little Note From Trove
-</div>
-
-<h2>Beauty, at your own pace.</h2>
-
-<p>
-Explore products that complement your everyday routine.
-</p>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<strong>TROVE BEAUTY CO.</strong>
-
-<p>
-Beauty • Self-Care • Everyday Essentials
-</p>
-
-<p>
-<a href="https://www.instagram.com/trovebeautyco/">
-Instagram @trovebeautyco
-</a>
-</p>
-
-<p>
-<a href="faq.html">FAQ</a>
-&nbsp; • &nbsp;
-<a href="privacy.html">Privacy</a>
-&nbsp; • &nbsp;
-<a href="terms.html">Terms</a>
-&nbsp; • &nbsp;
-<a href="shipping.html">Shipping</a>
-&nbsp; • &nbsp;
-<a href="returns.html">Returns</a>
-&nbsp; • &nbsp;
-<a href="legal.html">Legal Notice</a>
-</p>
-
-<p>
-<a href="contact.html">Contact Us</a>
-</p>
-
-<p>
-© <span id="year"></span> Trove Beauty Co.
-</p>
-
-<p>
-Store preview — live checkout is not connected.
-</p>
-
-</footer>
-
-<script>
-
-/* PRODUCT CATALOG */
-
-const products = [
-
-{
-name:"Volumizing Mascara",
-category:"Makeup",
-source:"CJdropshipping",
-price:19.99,
-image:"https://images.unsplash.com/photo-1631214540242-7b6b3b8f4f9e?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"18-Piece Makeup Brush Set",
-category:"Beauty Tools",
-source:"CJdropshipping",
-price:29.99,
-image:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Microfiber Hair Towel Wrap",
-category:"Hair Care",
-source:"EPROLO",
-price:34.99,
-image:"https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Everyday Self-Care Find",
-category:"Self-Care",
-source:"EPROLO",
-price:24.99,
-image:"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Portable LED Makeup Mirror",
-category:"Beauty Tools",
-source:"CJdropshipping",
-price:32.99,
-image:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Satin Sleep Bonnet",
-category:"Hair Care",
-source:"EPROLO",
-price:34.99,
-image:"https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Jelly Lip Oil",
-category:"Makeup",
-source:"CJdropshipping",
-price:14.99,
-image:"https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=700&q=80"
-},
-
-{
-name:"Eye & Face Ice Roller",
-category:"Beauty Tools",
-source:"CJdropshipping",
-price:24.99,
-image:"https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=80"
-}
-
-];
-
-
-/* ELEMENTS */
-
-const grid = document.getElementById("products");
-const searchInput = document.getElementById("searchInput");
-const resultsInfo = document.getElementById("resultsInfo");
-const noResults = document.getElementById("noResults");
-
-let currentCategory = "All";
-
-
-/* DISPLAY PRODUCTS */
-
-function showProducts() {
-
-  const searchTerm =
-    searchInput.value.toLowerCase().trim();
-
-  const filtered = products.filter(product => {
-
-    const matchesCategory =
-      currentCategory === "All" ||
-      product.category === currentCategory;
-
-    const matchesSearch =
-      product.name.toLowerCase().includes(searchTerm) ||
-      product.category.toLowerCase().includes(searchTerm) ||
-      product.source.toLowerCase().includes(searchTerm);
-
-    return matchesCategory && matchesSearch;
-
-  });
-
-
-  /* RESULT MESSAGE */
-
-  if (searchTerm) {
-
-    resultsInfo.textContent =
-      filtered.length +
-      (filtered.length === 1
-        ? " product found"
-        : " products found") +
-      ' for "' +
-      searchInput.value +
-      '"';
-
-  } else {
-
-    resultsInfo.textContent =
-      "Showing " +
-      filtered.length +
-      (filtered.length === 1
-        ? " product"
-        : " products");
-
-  }
-
-
-  /* NO RESULTS */
-
-  if (filtered.length === 0) {
-
-    grid.innerHTML = "";
-    noResults.style.display = "block";
-
-    return;
-
-  }
-
-  noResults.style.display = "none";
-
-
-  /* PRODUCT CARDS */
-
-  grid.innerHTML = filtered.map(product => `
-
-    <article class="product">
-
-      <img
-        src="${product.image}"
-        alt="${product.name}"
-        loading="lazy"
-      >
-
-      <div class="info">
-
-        <div class="source">
-          ${product.source}
-        </div>
-
-        <h3>
-          ${product.name}
-        </h3>
-
-        <div class="category">
-          ${product.category}
-        </div>
-
-        <div class="price">
-          $${product.price.toFixed(2)}
-        </div>
-
-        <button
-          class="add"
-          onclick="addToBag('${product.name.replace(/'/g,"\\'")}')"
-        >
-          Add to Bag
-        </button>
-
-      </div>
-
-    </article>
-
-  `).join("");
-
-}
-
-
-/* CATEGORY FILTERS */
-
-document
-.querySelectorAll(".filters button")
-.forEach(button => {
-
-  button.addEventListener("click", () => {
-
-    document
-    .querySelectorAll(".filters button")
-    .forEach(b =>
-      b.classList.remove("active")
-    );
-
-    button.classList.add("active");
-
-    currentCategory =
-      button.dataset.filter;
-
-    showProducts();
-
-  });
-
-});
-
-
-/* LIVE SEARCH */
-
-searchInput.addEventListener(
-  "input",
-  showProducts
-);
-
-
-/* DEMO CART */
-
-function addToBag(name) {
-
-  alert(
-    name +
-    " is a demo product. Live cart and checkout are not connected yet."
-  );
-
-}
-
-
-/* YEAR */
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-
-/* INITIAL DISPLAY */
-
-showProducts();
-
-</script>
-
-</body>
-</html>
-```
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Search Beauty Products | Trove Beauty Co.</title>
+
+  <meta
+    name="description"
+    content="Search makeup, beauty tools, hair care, self-care and everyday beauty essentials at Trove Beauty Co."
+  >
+
+  <meta
+    name="keywords"
+    content="beauty products, makeup, beauty tools, hair care, self care, Trove Beauty Co."
+  >
+
+  <link
+    rel="canonical"
+    href="https://website.thetradetrove.com/search.html"
+  >
+
+  <style>
+    :root{
+      --ink:#29231f;
+      --paper:#faf8f4;
+      --rose:#95685d;
+      --line:#e7dfd6;
+      --muted:#766e67;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Arial,sans-serif;
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input{
+      font:inherit;
+    }
+
+    /* ANNOUNCEMENT */
+
+    .announcement{
+      background:var(--ink);
+      color:#fff;
+      text-align:center;
+      padding:9px 15px;
+      font-size:11px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    /* HEADER */
+
+    header{
+      background:var(--paper);
+      border-bottom:1px solid var(--line);
+    }
+
+    .header-inner{
+      max-width:1180px;
+      margin:auto;
+      padding:20px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .logo{
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:1.5px;
+      white-space:nowrap;
+    }
+
+    .logo span{
+      color:var(--rose);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:25px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    nav a{
+      font-size:11px;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+    }
+
+    nav a:hover{
+      color:var(--rose);
+    }
+
+    .cart-link{
+      font-weight:700;
+    }
+
+    .cart-count{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:18px;
+      height:18px;
+      padding:0 5px;
+      margin-left:3px;
+      border-radius:50%;
+      background:var(--rose);
+      color:#fff;
+      font-size:10px;
+      letter-spacing:0;
+      vertical-align:middle;
+    }
+
+    /* HERO */
+
+    .hero{
+      background:#eee5dc;
+      text-align:center;
+      padding:75px 20px 70px;
+    }
+
+    .eyebrow{
+      color:var(--rose);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+
+    .hero h1{
+      font-family:Georgia,"Times New Roman",serif

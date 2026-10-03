@@ -1,311 +1,700 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Search | Trove Beauty Co.</title>
+<title>Search Beauty Products | Trove Beauty Co.</title>
+<meta name="description" content="Search makeup, beauty tools, hair care and self-care products at Trove Beauty Co. Discover everyday beauty essentials.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://website.thetradetrove.com/search.html">
+
+<meta property="og:title" content="Search | Trove Beauty Co.">
+<meta property="og:description" content="Find makeup, beauty tools, hair care and self-care essentials.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://website.thetradetrove.com/search.html">
 
 <style>
 :root{
-  --ink:#29231f;
-  --paper:#faf8f4;
-  --rose:#95685d;
-  --line:#e7dfd6;
-  --muted:#766e67;
+--ink:#29231f;
+--paper:#faf8f4;
+--rose:#95685d;
+--line:#e7dfd6;
+--muted:#766e67;
+--white:#fff;
+--beige:#eee5dc;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:var(--paper);
+color:var(--ink);
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.5;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
 
-.topbar{
-  background:var(--ink);
-  color:white;
-  text-align:center;
-  padding:9px;
-  font-size:11px;
-  letter-spacing:2px;
+.announcement{
+background:var(--ink);
+color:#fff;
+text-align:center;
+padding:9px 15px;
+font-size:11px;
+letter-spacing:1.8px;
+text-transform:uppercase;
 }
 
 header{
-  border-bottom:1px solid var(--line);
+background:var(--paper);
+border-bottom:1px solid var(--line);
 }
 
-.header{
-  max-width:1180px;
-  margin:auto;
-  padding:20px 5%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+.header-inner{
+max-width:1180px;
+margin:auto;
+padding:20px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
 }
 
 .logo{
-  font-size:20px;
-  font-weight:bold;
-  letter-spacing:1.5px;
+font-size:20px;
+font-weight:700;
+letter-spacing:2px;
+white-space:nowrap;
 }
 
-.logo span{
-  color:var(--rose);
-}
+.logo span{color:var(--rose)}
 
 nav{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
+display:flex;
+align-items:center;
+gap:22px;
+flex-wrap:wrap;
+justify-content:flex-end;
 }
 
 nav a{
-  font-size:11px;
-  letter-spacing:1px;
-  text-transform:uppercase;
+font-size:11px;
+letter-spacing:1.2px;
+text-transform:uppercase;
 }
 
-nav a:hover{
-  color:var(--rose);
+nav a:hover{color:var(--rose)}
+
+.cart-link{font-weight:700}
+
+.cart-count{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:18px;
+height:18px;
+padding:0 5px;
+margin-left:4px;
+border-radius:50px;
+background:var(--rose);
+color:#fff;
+font-size:9px;
 }
 
 .hero{
-  background:#eee5dc;
-  text-align:center;
-  padding:65px 20px;
+background:var(--beige);
+text-align:center;
+padding:65px 20px;
 }
 
-.hero small{
-  color:var(--rose);
-  font-weight:bold;
-  letter-spacing:2px;
+.eyebrow{
+margin:0 0 12px;
+color:var(--rose);
+font-size:11px;
+font-weight:700;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
 .hero h1{
-  font-family:Georgia,serif;
-  font-size:46px;
-  font-weight:normal;
-  margin:12px 0;
+margin:0 auto 14px;
+font-family:Georgia,"Times New Roman",serif;
+font-size:clamp(38px,6vw,64px);
+font-weight:400;
+line-height:1.05;
 }
 
 .hero p{
-  color:var(--muted);
+max-width:600px;
+margin:auto;
+color:var(--muted);
+font-size:14px;
 }
 
-.main{
-  max-width:1180px;
-  margin:auto;
-  padding:50px 5%;
+.search-wrap{
+max-width:1180px;
+margin:auto;
+padding:50px 5% 70px;
 }
 
-.search{
-  max-width:700px;
-  margin:0 auto 30px;
-  display:flex;
-  border:1px solid var(--line);
-  background:white;
+.search-main{
+max-width:760px;
+margin:0 auto 38px;
 }
 
-.search input{
-  flex:1;
-  border:0;
-  outline:0;
-  padding:16px;
-  font-size:14px;
+.search-label{
+display:block;
+margin-bottom:10px;
+font-size:11px;
+font-weight:700;
+letter-spacing:1.2px;
+text-transform:uppercase;
 }
 
-.search button{
-  border:0;
-  background:var(--ink);
-  color:white;
-  padding:0 25px;
-  cursor:pointer;
+.search-box{
+position:relative;
 }
 
-.filters{
-  text-align:center;
-  margin-bottom:35px;
+.search-box input{
+width:100%;
+height:55px;
+padding:0 50px 0 17px;
+border:1px solid var(--line);
+background:#fff;
+color:var(--ink);
+outline:none;
+border-radius:0;
+font-size:14px;
 }
 
-.filters button{
-  background:transparent;
-  border:1px solid var(--line);
-  padding:9px 14px;
-  margin:4px;
-  cursor:pointer;
-  font-size:10px;
-  text-transform:uppercase;
+.search-box input:focus{border-color:var(--rose)}
+
+.search-icon{
+position:absolute;
+right:17px;
+top:50%;
+transform:translateY(-50%);
+font-size:23px;
+color:var(--muted);
+pointer-events:none;
 }
 
-.filters button:hover,
-.filters button.active{
-  background:var(--ink);
-  color:white;
+.search-hint{
+margin-top:9px;
+color:var(--muted);
+font-size:11px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
+.tools{
+display:grid;
+grid-template-columns:1fr auto;
+gap:15px;
+align-items:center;
+margin-bottom:20px;
 }
 
-.card{
-  background:white;
-  border:1px solid var(--line);
+.filter-row{
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-bottom:25px;
 }
 
-.card img{
-  width:100%;
-  height:300px;
-  object-fit:cover;
-  display:block;
+.filter-btn{
+border:1px solid var(--line);
+background:transparent;
+color:var(--ink);
+padding:10px 15px;
+font-size:10px;
+letter-spacing:1px;
+text-transform:uppercase;
+transition:.2s;
 }
 
-.info{
-  padding:16px;
+.filter-btn:hover,
+.filter-btn.active{
+background:var(--ink);
+color:#fff;
+border-color:var(--ink);
 }
 
-.source{
-  color:var(--rose);
-  font-size:9px;
-  font-weight:bold;
-  letter-spacing:1.5px;
+.sort-select{
+height:43px;
+min-width:180px;
+padding:0 12px;
+border:1px solid var(--line);
+background:#fff;
+color:var(--ink);
 }
 
-.name{
-  font-size:14px;
-  font-weight:bold;
-  margin:7px 0;
+.results-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
 }
 
-.cat{
-  color:var(--muted);
-  font-size:11px;
+.results-count{
+font-size:12px;
+color:var(--muted);
 }
 
-.price{
-  font-weight:bold;
-  margin:10px 0;
+.clear-btn{
+display:none;
+border:0;
+background:none;
+color:var(--rose);
+font-size:11px;
+text-decoration:underline;
 }
 
-.add{
-  width:100%;
-  padding:12px;
-  border:0;
-  background:var(--ink);
-  color:white;
-  cursor:pointer;
-  font-size:10px;
-  font-weight:bold;
-  letter-spacing:1px;
+.product-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
-.add:hover,
-.added{
-  background:var(--rose);
+.product-card{
+background:#fff;
+border:1px solid transparent;
+overflow:hidden;
+transition:.2s;
 }
 
-.no-results{
-  display:none;
-  text-align:center;
-  padding:40px;
+.product-card:hover{
+border-color:var(--line);
+transform:translateY(-2px);
+}
+
+.image-wrap{
+position:relative;
+aspect-ratio:4/5;
+background:#f1ece7;
+overflow:hidden;
+}
+
+.product-image{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:transform .35s;
+}
+
+.product-card:hover .product-image{transform:scale(1.03)}
+
+.badges{
+position:absolute;
+top:10px;
+left:10px;
+display:flex;
+flex-direction:column;
+gap:5px;
+}
+
+.badge{
+background:var(--ink);
+color:#fff;
+padding:5px 7px;
+font-size:8px;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.wishlist{
+position:absolute;
+top:10px;
+right:10px;
+width:34px;
+height:34px;
+border:0;
+border-radius:50%;
+background:rgba(255,255,255,.95);
+color:var(--ink);
+font-size:17px;
+}
+
+.wishlist.active{color:var(--rose)}
+
+.quick-view{
+position:absolute;
+left:10px;
+right:10px;
+bottom:10px;
+padding:10px;
+border:0;
+background:rgba(41,35,31,.92);
+color:#fff;
+font-size:9px;
+letter-spacing:1.2px;
+text-transform:uppercase;
+opacity:0;
+transform:translateY(8px);
+transition:.2s;
+}
+
+.product-card:hover .quick-view{
+opacity:1;
+transform:translateY(0);
+}
+
+.product-info{padding:15px 14px 16px}
+
+.product-source{
+margin-bottom:5px;
+color:var(--rose);
+font-size:9px;
+font-weight:700;
+letter-spacing:1.1px;
+text-transform:uppercase;
+}
+
+.product-title{
+margin:0 0 5px;
+font-size:13px;
+font-weight:600;
+line-height:1.4;
+}
+
+.product-category{
+margin-bottom:10px;
+color:var(--muted);
+font-size:11px;
+}
+
+.price-row{
+display:flex;
+gap:8px;
+align-items:center;
+margin-bottom:13px;
+}
+
+.price{font-size:14px;font-weight:700}
+
+.compare-price{
+color:#a39b94;
+font-size:12px;
+text-decoration:line-through;
+}
+
+.add-btn{
+width:100%;
+border:0;
+background:var(--ink);
+color:#fff;
+padding:12px 10px;
+font-size:10px;
+letter-spacing:1.2px;
+text-transform:uppercase;
+transition:.2s;
+}
+
+.add-btn:hover{background:var(--rose)}
+
+.empty-state{
+display:none;
+padding:65px 20px;
+background:#fff;
+border:1px solid var(--line);
+text-align:center;
+}
+
+.empty-state h2{
+margin:0 0 10px;
+font-family:Georgia,"Times New Roman",serif;
+font-size:30px;
+font-weight:400;
+}
+
+.empty-state p{
+color:var(--muted);
+font-size:13px;
+margin:0 0 20px;
+}
+
+.reset-btn{
+border:0;
+background:var(--ink);
+color:#fff;
+padding:12px 20px;
+font-size:10px;
+letter-spacing:1px;
+text-transform:uppercase;
 }
 
 .note{
-  background:#eee5dc;
-  text-align:center;
-  padding:50px 20px;
+background:var(--beige);
+padding:50px 20px;
+text-align:center;
 }
 
 .note h2{
-  font-family:Georgia,serif;
-  font-weight:normal;
+margin:0 0 10px;
+font-family:Georgia,"Times New Roman",serif;
+font-size:29px;
+font-weight:400;
 }
 
 .note p{
-  color:var(--muted);
+max-width:620px;
+margin:auto;
+color:var(--muted);
+font-size:13px;
 }
 
 footer{
-  background:var(--ink);
-  color:white;
-  text-align:center;
-  padding:40px 20px;
+background:var(--ink);
+color:#fff;
+text-align:center;
+padding:45px 20px;
+}
+
+.footer-logo{
+margin-bottom:10px;
+font-size:18px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+.footer-logo span{color:#d7a99e}
+
+.footer-text{
+max-width:600px;
+margin:0 auto 22px;
+color:#d8d0ca;
+font-size:12px;
 }
 
 .footer-links{
-  margin:20px 0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px 22px;
+margin-bottom:22px;
 }
 
 .footer-links a{
-  margin:0 8px;
-  font-size:10px;
-  text-transform:uppercase;
+color:#fff;
+font-size:10px;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.footer-links a:hover{color:#d7a99e}
+
+.copyright{color:#aaa19a;font-size:10px}
+
+/* Quick view */
+
+.modal{
+position:fixed;
+inset:0;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:rgba(41,35,31,.72);
+z-index:1000;
+}
+
+.modal.open{display:flex}
+
+.modal-box{
+position:relative;
+width:min(850px,100%);
+max-height:90vh;
+overflow:auto;
+background:var(--paper);
+display:grid;
+grid-template-columns:1fr 1fr;
+}
+
+.modal-image{
+width:100%;
+height:100%;
+min-height:420px;
+object-fit:cover;
+background:var(--beige);
+}
+
+.modal-content{
+padding:40px 35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.modal-content h2{
+margin:0 0 10px;
+font-family:Georgia,"Times New Roman",serif;
+font-size:34px;
+font-weight:400;
+line-height:1.1;
+}
+
+.modal-category{
+color:var(--muted);
+font-size:12px;
+margin-bottom:18px;
+}
+
+.modal-price{
+font-size:20px;
+font-weight:700;
+margin-bottom:20px;
+}
+
+.modal-content p{
+color:var(--muted);
+font-size:13px;
+margin:0 0 25px;
+}
+
+.modal-add{
+width:100%;
+border:0;
+background:var(--ink);
+color:#fff;
+padding:14px;
+font-size:10px;
+letter-spacing:1.2px;
+text-transform:uppercase;
+}
+
+.modal-close{
+position:absolute;
+top:12px;
+right:12px;
+width:34px;
+height:34px;
+border:0;
+border-radius:50%;
+background:#fff;
+color:var(--ink);
+font-size:20px;
+z-index:3;
+}
+
+.toast{
+position:fixed;
+left:50%;
+bottom:25px;
+transform:translate(-50%,20px);
+background:var(--ink);
+color:#fff;
+padding:12px 18px;
+font-size:11px;
+opacity:0;
+pointer-events:none;
+transition:.25s;
+z-index:2000;
+}
+
+.toast.show{
+opacity:1;
+transform:translate(-50%,0);
+}
+
+@media(max-width:1000px){
+.product-grid{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(max-width:850px){
+.header-inner{
+align-items:flex-start;
+flex-direction:column;
+}
 
-  .header{
-    flex-direction:column;
-  }
+nav{
+width:100%;
+justify-content:flex-start;
+gap:15px;
+}
 
-  .grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.tools{grid-template-columns:1fr}
 
+.sort-select{width:100%}
+
+.product-grid{
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.quick-view{
+opacity:1;
+transform:none;
+}
+
+.modal-box{grid-template-columns:1fr}
+
+.modal-image{
+min-height:250px;
+max-height:300px;
+}
+
+.modal-content{padding:28px 23px}
 }
 
 @media(max-width:600px){
+.announcement{
+font-size:9px;
+letter-spacing:1.3px;
+}
 
-  .hero h1{
-    font-size:35px;
-  }
+.header-inner{padding:17px 5%}
 
-  .search{
-    flex-direction:column;
-  }
+.logo{font-size:18px}
 
-  .search button{
-    padding:13px;
-  }
+nav{gap:11px 14px}
 
-  .grid{
-    gap:12px;
-  }
+nav a{font-size:9px}
 
-  .card img{
-    height:220px;
-  }
+.hero{padding:50px 18px}
 
-  nav{
-    justify-content:center;
-    gap:12px;
-  }
+.hero h1{font-size:42px}
 
+.hero p{font-size:13px}
+
+.search-wrap{padding:38px 4% 55px}
+
+.filter-row{
+flex-wrap:nowrap;
+overflow-x:auto;
+padding-bottom:5px;
+}
+
+.filter-btn{white-space:nowrap}
+
+.product-info{padding:12px 10px}
+
+.product-title{font-size:12px}
+
+.product-category{font-size:10px}
+
+.add-btn{
+padding:11px 7px;
+font-size:9px;
+}
+
+.note{padding:42px 18px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
+<div class="announcement">
 THOUGHTFUL BEAUTY FINDS • EVERYDAY SELF-CARE
 </div>
 
 <header>
-<div class="header">
+<div class="header-inner">
 
 <a href="index.html" class="logo">
 TROVE <span>BEAUTY CO.</span>
@@ -317,511 +706,582 @@ TROVE <span>BEAUTY CO.</span>
 <a href="search.html">Search</a>
 <a href="about.html">About</a>
 <a href="contact.html">Contact</a>
-<a href="cart.html">Bag <span id="bagCount">0</span></a>
+<a href="cart.html" class="cart-link">
+Bag <span class="cart-count" id="cartCount">0</span>
+</a>
 </nav>
 
 </div>
 </header>
 
+<main>
+
 <section class="hero">
-
-<small>FIND YOUR FAVORITES</small>
-
-<h1>Search Trove Beauty</h1>
-
+<p class="eyebrow">Find Your Everyday Favorites</p>
+<h1>Search the Trove.</h1>
 <p>
 Explore makeup, beauty tools, hair care and self-care essentials.
 </p>
-
 </section>
 
-<main class="main">
+<section class="search-wrap">
 
-<div class="search">
+<div class="search-main">
 
+<label class="search-label" for="productSearch">
+What are you looking for?
+</label>
+
+<div class="search-box">
 <input
-id="searchInput"
-type="text"
-placeholder="Search products..."
+type="search"
+id="productSearch"
+placeholder="Search mascara, brushes, hair care..."
+autocomplete="off"
 >
+<span class="search-icon">⌕</span>
+</div>
 
-<button onclick="searchProducts()">
-SEARCH
-</button>
+<div class="search-hint">
+Search by product name, category or supplier.
+</div>
 
 </div>
 
-<div class="filters">
+<div class="tools">
 
-<button class="active" onclick="setCategory('All',this)">
+<div class="filter-row">
+
+<button class="filter-btn active" data-category="All Products">
 All Products
 </button>
 
-<button onclick="setCategory('Makeup',this)">
+<button class="filter-btn" data-category="Makeup">
 Makeup
 </button>
 
-<button onclick="setCategory('Beauty Tools',this)">
+<button class="filter-btn" data-category="Beauty Tools">
 Beauty Tools
 </button>
 
-<button onclick="setCategory('Hair Care',this)">
+<button class="filter-btn" data-category="Hair Care">
 Hair Care
 </button>
 
-<button onclick="setCategory('Self-Care',this)">
+<button class="filter-btn" data-category="Self-Care">
 Self-Care
 </button>
 
 </div>
 
-<div id="grid" class="grid">
-
-
-<div class="card" data-name="Volumizing Mascara" data-cat="Makeup">
-
-<img
-src="https://images.unsplash.com/photo-1631214524020-7e18db9e8f08?auto=format&fit=crop&w=700&q=80"
-alt="Volumizing Mascara"
->
-
-<div class="info">
-
-<div class="source">CJdropshipping</div>
-
-<div class="name">Volumizing Mascara</div>
-
-<div class="cat">Makeup</div>
-
-<div class="price">$19.99</div>
-
-<button class="add"
-onclick="addToBag('Volumizing Mascara',this)">
-ADD TO BAG
-</button>
+<select id="sortProducts" class="sort-select" aria-label="Sort products">
+<option value="featured">Sort: Featured</option>
+<option value="nameAsc">Name: A–Z</option>
+<option value="nameDesc">Name: Z–A</option>
+<option value="priceLow">Price: Low to High</option>
+<option value="priceHigh">Price: High to Low</option>
+</select>
 
 </div>
+
+<div class="results-row">
+<div class="results-count" id="resultsCount">Showing 8 products</div>
+<button class="clear-btn" id="clearSearch">Clear search</button>
 </div>
 
+<div class="product-grid" id="productGrid"></div>
 
-<div class="card" data-name="18-Piece Makeup Brush Set" data-cat="Beauty Tools">
-
-<img
-src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
-alt="18-Piece Makeup Brush Set"
->
-
-<div class="info">
-
-<div class="source">CJdropshipping</div>
-
-<div class="name">18-Piece Makeup Brush Set</div>
-
-<div class="cat">Beauty Tools</div>
-
-<div class="price">$29.99</div>
-
-<button class="add"
-onclick="addToBag('18-Piece Makeup Brush Set',this)">
-ADD TO BAG
-</button>
-
+<div class="empty-state" id="emptyState">
+<h2>No matching products</h2>
+<p>Try a different keyword or browse all products.</p>
+<button class="reset-btn" id="resetProducts">View All Products</button>
 </div>
-</div>
-
-
-<div class="card" data-name="Microfiber Hair Towel Wrap" data-cat="Hair Care">
-
-<img
-src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80"
-alt="Microfiber Hair Towel Wrap"
->
-
-<div class="info">
-
-<div class="source">EPROLO</div>
-
-<div class="name">Microfiber Hair Towel Wrap</div>
-
-<div class="cat">Hair Care</div>
-
-<div class="price">$34.99</div>
-
-<button class="add"
-onclick="addToBag('Microfiber Hair Towel Wrap',this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="card" data-name="Everyday Self-Care Find" data-cat="Self-Care">
-
-<img
-src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80"
-alt="Everyday Self-Care Find"
->
-
-<div class="info">
-
-<div class="source">EPROLO</div>
-
-<div class="name">Everyday Self-Care Find</div>
-
-<div class="cat">Self-Care</div>
-
-<div class="price">$24.99</div>
-
-<button class="add"
-onclick="addToBag('Everyday Self-Care Find',this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="card" data-name="Portable LED Makeup Mirror" data-cat="Beauty Tools">
-
-<img
-src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
-alt="Portable LED Makeup Mirror"
->
-
-<div class="info">
-
-<div class="source">CJdropshipping</div>
-
-<div class="name">Portable LED Makeup Mirror</div>
-
-<div class="cat">Beauty Tools</div>
-
-<div class="price">$32.99</div>
-
-<button class="add"
-onclick="addToBag('Portable LED Makeup Mirror',this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="card" data-name="Satin Sleep Bonnet" data-cat="Hair Care">
-
-<img
-src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
-alt="Satin Sleep Bonnet"
->
-
-<div class="info">
-
-<div class="source">EPROLO</div>
-
-<div class="name">Satin Sleep Bonnet</div>
-
-<div class="cat">Hair Care</div>
-
-<div class="price">$34.99</div>
-
-<button class="add"
-onclick="addToBag('Satin Sleep Bonnet',this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="card" data-name="Jelly Lip Oil" data-cat="Makeup">
-
-<img
-src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=700&q=80"
-alt="Jelly Lip Oil"
->
-
-<div class="info">
-
-<div class="source">CJdropshipping</div>
-
-<div class="name">Jelly Lip Oil</div>
-
-<div class="cat">Makeup</div>
-
-<div class="price">$14.99</div>
-
-<button class="add"
-onclick="addToBag('Jelly Lip Oil',this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-<div class="card" data-name="Eye and Face Ice Roller" data-cat="Beauty Tools">
-
-<img
-src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=80"
-alt="Eye and Face Ice Roller"
->
-
-<div class="info">
-
-<div class="source">CJdropshipping</div>
-
-<div class="name">Eye &amp; Face Ice Roller</div>
-
-<div class="cat">Beauty Tools</div>
-
-<div class="price">$24.99</div>
-
-<button class="add"
-onclick="addToBag('Eye & Face Ice Roller',this)">
-ADD TO BAG
-</button>
-
-</div>
-</div>
-
-
-</div>
-
-<div id="noResults" class="no-results">
-
-<h2>No products found</h2>
-
-<p>Try another search or category.</p>
-
-</div>
-
-</main>
-
-<section class="note">
-
-<h2>Beauty Finds, Thoughtfully Chosen</h2>
-
-<p>
-Trove Beauty Co. brings together makeup, beauty tools,
-hair care and everyday self-care essentials.
-</p>
 
 </section>
 
+<section class="note">
+<h2>Discover your everyday beauty finds.</h2>
+<p>
+A thoughtful collection of beauty, hair care and self-care essentials.
+This website preview uses demonstration product and cart data.
+</p>
+</section>
+
+</main>
+
 <footer>
 
-<strong>TROVE BEAUTY CO.</strong>
+<div class="footer-logo">
+TROVE <span>BEAUTY CO.</span>
+</div>
+
+<p class="footer-text">
+Beauty, self-care, hair care, beauty tools and everyday essentials.
+</p>
 
 <div class="footer-links">
-
 <a href="faq.html">FAQ</a>
 <a href="privacy.html">Privacy</a>
 <a href="terms.html">Terms</a>
 <a href="shipping.html">Shipping</a>
 <a href="returns.html">Returns</a>
 <a href="legal.html">Legal Notice</a>
-<a href="contact.html">Contact</a>
-
+<a href="contact.html">Contact Us</a>
 </div>
 
-<small>
-Store preview — live checkout is not connected.
-</small>
+<div class="copyright">
+© 2026 Trove Beauty Co. All rights reserved.
+</div>
 
 </footer>
 
+<div class="modal" id="quickViewModal">
+
+<div class="modal-box">
+
+<button class="modal-close" id="modalClose" aria-label="Close">
+×
+</button>
+
+<img id="modalImage" class="modal-image" src="" alt="">
+
+<div class="modal-content">
+
+<div class="product-source" id="modalSource"></div>
+<h2 id="modalTitle"></h2>
+<div class="modal-category" id="modalCategory"></div>
+<div class="modal-price" id="modalPrice"></div>
+<p id="modalDescription"></p>
+
+<button class="modal-add" id="modalAdd">
+Add to Bag
+</button>
+
+</div>
+</div>
+</div>
+
+<div class="toast" id="toast">Added to your bag.</div>
 
 <script>
+const CART_KEY = "troveBeautyCart";
+const WISHLIST_KEY = "troveBeautyWishlist";
 
-var CART_KEY = "troveBeautyCart";
+const PRODUCTS = [
 
-var selectedCategory = "All";
+{
+id:"volumizing-mascara",
+name:"Volumizing Mascara",
+category:"Makeup",
+source:"CJdropshipping",
+price:19.99,
+comparePrice:24.99,
+badge:"Best Seller",
+image:"https://images.unsplash.com/photo-1631214524020-7e18db9e1c2b?auto=format&fit=crop&w=900&q=85",
+description:"A beauty-bag essential designed to complement your everyday makeup routine with defined, fuller-looking lashes."
+},
 
+{
+id:"makeup-brush-set",
+name:"18-Piece Makeup Brush Set",
+category:"Beauty Tools",
+source:"CJdropshipping",
+price:29.99,
+comparePrice:34.99,
+badge:"Featured",
+image:"https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85",
+description:"A versatile collection of makeup brushes for everyday application, blending and finishing."
+},
+
+{
+id:"hair-towel-wrap",
+name:"Microfiber Hair Towel Wrap",
+category:"Hair Care",
+source:"EPROLO",
+price:34.99,
+comparePrice:39.99,
+badge:"New",
+image:"https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=85",
+description:"A lightweight hair-care essential designed to make your post-wash routine more convenient."
+},
+
+{
+id:"self-care-find",
+name:"Everyday Self-Care Find",
+category:"Self-Care",
+source:"EPROLO",
+price:24.99,
+comparePrice:29.99,
+badge:"New",
+image:"https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=85",
+description:"A simple self-care addition for creating a more enjoyable everyday beauty ritual."
+},
+
+{
+id:"led-makeup-mirror",
+name:"Portable LED Makeup Mirror",
+category:"Beauty Tools",
+source:"CJdropshipping",
+price:32.99,
+comparePrice:39.99,
+badge:"Featured",
+image:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85",
+description:"A compact beauty tool for makeup application, touch-ups and everyday grooming."
+},
+
+{
+id:"satin-sleep-bonnet",
+name:"Satin Sleep Bonnet",
+category:"Hair Care",
+source:"EPROLO",
+price:34.99,
+comparePrice:39.99,
+badge:"Popular",
+image:"https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=85",
+description:"A comfortable hair-care accessory designed to complement your nighttime routine."
+},
+
+{
+id:"jelly-lip-oil",
+name:"Jelly Lip Oil",
+category:"Makeup",
+source:"CJdropshipping",
+price:14.99,
+comparePrice:18.99,
+badge:"New",
+image:"https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=900&q=85",
+description:"A glossy lip essential for adding a fresh finishing touch to your everyday makeup look."
+},
+
+{
+id:"ice-roller",
+name:"Eye & Face Ice Roller",
+category:"Beauty Tools",
+source:"CJdropshipping",
+price:24.99,
+comparePrice:29.99,
+badge:"Featured",
+image:"https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=85",
+description:"A refreshing beauty tool designed for a cool, relaxing addition to your skincare routine."
+}
+
+];
 
 function getCart(){
-
 try{
-
-return JSON.parse(
-localStorage.getItem(CART_KEY)
-) || [];
-
-}catch(e){
-
+return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+}catch(error){
 return [];
-
+}
 }
 
+function saveCart(cart){
+localStorage.setItem(CART_KEY,JSON.stringify(cart));
 }
 
-
-function updateBagCount(){
-
-var cart = getCart();
-
-var total = 0;
-
-for(var i=0;i<cart.length;i++){
-
-total += Number(cart[i].quantity) || 0;
-
+function updateCartCount(){
+const total=getCart().reduce(
+(sum,item)=>sum+Number(item.quantity||0),0
+);
+document.getElementById("cartCount").textContent=total;
 }
 
-document.getElementById("bagCount").innerHTML = total;
+function addToBag(productId,button){
+const product=PRODUCTS.find(item=>item.id===productId);
+if(!product)return;
 
-}
+const cart=getCart();
+const existing=cart.find(item=>item.id===product.id);
 
-
-function addToBag(name,button){
-
-var cart = getCart();
-
-var found = false;
-
-for(var i=0;i<cart.length;i++){
-
-if(cart[i].name === name){
-
-cart[i].quantity =
-Number(cart[i].quantity || 0) + 1;
-
-found = true;
-
-break;
-
-}
-
-}
-
-
-if(!found){
-
+if(existing){
+existing.quantity+=1;
+}else{
 cart.push({
-name:name,
+id:product.id,
+name:product.name,
+price:product.price,
+image:product.image,
 quantity:1
 });
-
 }
 
+saveCart(cart);
+updateCartCount();
+showToast(product.name+" added to your bag.");
 
-localStorage.setItem(
-CART_KEY,
-JSON.stringify(cart)
-);
-
-updateBagCount();
-
-
-button.innerHTML = "ADDED TO BAG";
-
-button.classList.add("added");
-
-
-setTimeout(function(){
-
-button.innerHTML = "ADD TO BAG";
-
-button.classList.remove("added");
-
-},1200);
-
+if(button){
+const original=button.textContent;
+button.textContent="Added to Bag";
+setTimeout(()=>button.textContent=original,1200);
+}
 }
 
+function getWishlist(){
+try{
+return JSON.parse(localStorage.getItem(WISHLIST_KEY))||[];
+}catch(error){
+return [];
+}
+}
 
-function searchProducts(){
+function toggleWishlist(id,button){
+let wishlist=getWishlist();
 
-var text =
-document.getElementById("searchInput")
-.value
-.toLowerCase();
-
-var cards =
-document.querySelectorAll(".card");
-
-var count = 0;
-
-
-for(var i=0;i<cards.length;i++){
-
-var name =
-cards[i]
-.getAttribute("data-name")
-.toLowerCase();
-
-var cat =
-cards[i]
-.getAttribute("data-cat");
-
-
-var matchText =
-name.indexOf(text) !== -1;
-
-var matchCategory =
-selectedCategory === "All" ||
-cat === selectedCategory;
-
-
-if(matchText && matchCategory){
-
-cards[i].style.display = "";
-
-count++;
-
+if(wishlist.includes(id)){
+wishlist=wishlist.filter(item=>item!==id);
+button.classList.remove("active");
+button.textContent="♡";
+showToast("Removed from wishlist.");
 }else{
-
-cards[i].style.display = "none";
-
-}
-
-}
-
-
-if(count === 0){
-
-document.getElementById("noResults").style.display = "block";
-
-}else{
-
-document.getElementById("noResults").style.display = "none";
-
-}
-
-}
-
-
-function setCategory(category,button){
-
-selectedCategory = category;
-
-
-var buttons =
-document.querySelectorAll(".filters button");
-
-for(var i=0;i<buttons.length;i++){
-
-buttons[i].classList.remove("active");
-
-}
-
+wishlist.push(id);
 button.classList.add("active");
-
-searchProducts();
-
+button.textContent="♥";
+showToast("Added to wishlist.");
 }
 
+localStorage.setItem(WISHLIST_KEY,JSON.stringify(wishlist));
+}
 
-document
-.getElementById("searchInput")
-.addEventListener("keyup",function(){
+function restoreWishlist(){
+const wishlist=getWishlist();
 
-searchProducts();
+document.querySelectorAll(".wishlist").forEach(button=>{
+if(wishlist.includes(button.dataset.id)){
+button.classList.add("active");
+button.textContent="♥";
+}
+});
+}
 
+let activeCategory="All Products";
+
+function renderProducts(){
+
+const grid=document.getElementById("productGrid");
+const searchTerm=document.getElementById("productSearch").value.trim().toLowerCase();
+const sort=document.getElementById("sortProducts").value;
+
+let products=PRODUCTS.filter(product=>{
+
+const matchesCategory=
+activeCategory==="All Products"||
+product.category===activeCategory;
+
+const matchesSearch=
+product.name.toLowerCase().includes(searchTerm)||
+product.category.toLowerCase().includes(searchTerm)||
+product.source.toLowerCase().includes(searchTerm);
+
+return matchesCategory&&matchesSearch;
 });
 
+if(sort==="nameAsc"){
+products.sort((a,b)=>a.name.localeCompare(b.name));
+}
 
-updateBagCount();
+if(sort==="nameDesc"){
+products.sort((a,b)=>b.name.localeCompare(a.name));
+}
 
+if(sort==="priceLow"){
+products.sort((a,b)=>a.price-b.price);
+}
+
+if(sort==="priceHigh"){
+products.sort((a,b)=>b.price-a.price);
+}
+
+grid.innerHTML="";
+
+products.forEach(product=>{
+
+const card=document.createElement("article");
+card.className="product-card";
+
+card.innerHTML=`
+
+<div class="image-wrap">
+
+<img
+class="product-image"
+src="${product.image}"
+alt="${product.name}"
+loading="lazy"
+>
+
+<div class="badges">
+<span class="badge">${product.badge}</span>
+</div>
+
+<button
+class="wishlist"
+data-id="${product.id}"
+aria-label="Add ${product.name} to wishlist"
+>♡</button>
+
+<button
+class="quick-view"
+onclick="openQuickView('${product.id}')"
+>Quick View</button>
+
+</div>
+
+<div class="product-info">
+
+<div class="product-source">${product.source}</div>
+
+<h2 class="product-title">${product.name}</h2>
+
+<div class="product-category">${product.category}</div>
+
+<div class="price-row">
+<span class="price">$${product.price.toFixed(2)}</span>
+<span class="compare-price">$${product.comparePrice.toFixed(2)}</span>
+</div>
+
+<button
+class="add-btn"
+onclick="addToBag('${product.id}',this)"
+>Add to Bag</button>
+
+</div>
+`;
+
+grid.appendChild(card);
+});
+
+document.getElementById("resultsCount").textContent=
+products.length===1?"Showing 1 product":`Showing ${products.length} products`;
+
+document.getElementById("emptyState").style.display=
+products.length===0?"block":"none";
+
+document.getElementById("clearSearch").style.display=
+searchTerm?"block":"none";
+
+restoreWishlist();
+}
+
+document.querySelectorAll(".filter-btn").forEach(button=>{
+button.addEventListener("click",()=>{
+
+document.querySelectorAll(".filter-btn")
+.forEach(item=>item.classList.remove("active"));
+
+button.classList.add("active");
+activeCategory=button.dataset.category;
+renderProducts();
+
+});
+});
+
+document.getElementById("productSearch")
+.addEventListener("input",renderProducts);
+
+document.getElementById("sortProducts")
+.addEventListener("change",renderProducts);
+
+document.getElementById("clearSearch")
+.addEventListener("click",()=>{
+document.getElementById("productSearch").value="";
+renderProducts();
+});
+
+document.getElementById("resetProducts")
+.addEventListener("click",()=>{
+
+activeCategory="All Products";
+document.getElementById("productSearch").value="";
+document.getElementById("sortProducts").value="featured";
+
+document.querySelectorAll(".filter-btn").forEach(button=>{
+button.classList.toggle(
+"active",
+button.dataset.category==="All Products"
+);
+});
+
+renderProducts();
+});
+
+document.addEventListener("click",event=>{
+const button=event.target.closest(".wishlist");
+if(button){
+toggleWishlist(button.dataset.id,button);
+}
+});
+
+let quickViewProduct=null;
+
+function openQuickView(id){
+
+const product=PRODUCTS.find(item=>item.id===id);
+if(!product)return;
+
+quickViewProduct=product;
+
+document.getElementById("modalImage").src=product.image;
+document.getElementById("modalImage").alt=product.name;
+document.getElementById("modalSource").textContent=product.source;
+document.getElementById("modalTitle").textContent=product.name;
+document.getElementById("modalCategory").textContent=product.category;
+document.getElementById("modalPrice").textContent="$"+product.price.toFixed(2);
+document.getElementById("modalDescription").textContent=product.description;
+
+document.getElementById("quickViewModal").classList.add("open");
+document.body.style.overflow="hidden";
+}
+
+function closeQuickView(){
+document.getElementById("quickViewModal").classList.remove("open");
+document.body.style.overflow="";
+quickViewProduct=null;
+}
+
+document.getElementById("modalClose")
+.addEventListener("click",closeQuickView);
+
+document.getElementById("quickViewModal")
+.addEventListener("click",event=>{
+if(event.target.id==="quickViewModal"){
+closeQuickView();
+}
+});
+
+document.addEventListener("keydown",event=>{
+if(event.key==="Escape"){
+closeQuickView();
+}
+});
+
+document.getElementById("modalAdd")
+.addEventListener("click",()=>{
+if(!quickViewProduct)return;
+
+addToBag(
+quickViewProduct.id,
+document.getElementById("modalAdd")
+);
+
+closeQuickView();
+});
+
+let toastTimer;
+
+function showToast(message){
+const toast=document.getElementById("toast");
+toast.textContent=message;
+toast.classList.add("show");
+
+clearTimeout(toastTimer);
+
+toastTimer=setTimeout(()=>{
+toast.classList.remove("show");
+},2200);
+}
+
+updateCartCount();
+renderProducts();
 </script>
 
 </body>

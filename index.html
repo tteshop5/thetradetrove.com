@@ -1,11 +1,128 @@
-```css
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Trove Beauty Co. | Beauty, Self-Care & Everyday Essentials</title>
+
+<meta name="description" content="Discover makeup, hair care, beauty tools and everyday self-care essentials at Trove Beauty Co. Thoughtful beauty finds for your everyday routine.">
+
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://website.thetradetrove.com/">
+
+<meta property="og:title" content="Trove Beauty Co.">
+<meta property="og:description" content="Thoughtful beauty finds for your everyday routine.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://website.thetradetrove.com/">
+
+<style>
+:root {
+  --ink: #29231f;
+  --paper: #faf8f4;
+  --rose: #95685d;
+  --line: #e7dfd6;
+  --muted: #766e67;
+  --cream: #eee5dc;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.announcement {
+  background: var(--ink);
+  color: white;
+  text-align: center;
+  padding: 11px 12px;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+}
+
+/* HEADER */
+
+.header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 20px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--rose);
+  font-weight: 400;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color .2s;
+}
+
+.nav a:hover {
+  color: var(--rose);
+}
+
+/* HERO */
+
 .hero {
+  position: relative;
+  min-height: 590px;
+
   background:
     linear-gradient(
       90deg,
-      rgba(91, 48, 47, 0.48) 0%,
-      rgba(91, 48, 47, 0.20) 48%,
-      rgba(91, 48, 47, 0.02) 100%
+      rgba(67, 36, 36, .54) 0%,
+      rgba(67, 36, 36, .30) 48%,
+      rgba(67, 36, 36, .04) 100%
     ),
     url("trove-hero.png");
 
@@ -13,47 +130,898 @@
   background-position: center 42%;
   background-repeat: no-repeat;
 
-  min-height: 590px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 
-  text-align: left;
-  padding: 85px 8%;
-  color: #ffffff;
+  padding: 80px max(7%, calc((100% - 1180px) / 2));
+  color: white;
+}
+
+.hero-content {
+  max-width: 680px;
+}
+
+.eyebrow {
+  color: var(--rose);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 19px;
 }
 
 .hero .eyebrow {
-  color: #ffffff;
+  color: white;
 }
 
 .hero h1 {
-  color: #ffffff;
-  max-width: 680px;
-  margin-left: 0;
-  text-shadow: 0 2px 12px rgba(0,0,0,.15);
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(43px, 6vw, 70px);
+  line-height: 1.08;
+  margin: 0 0 23px;
+  max-width: 700px;
+  text-shadow: 0 2px 14px rgba(0,0,0,.15);
 }
 
 .hero p {
-  color: #ffffff;
-  max-width: 490px;
-  margin-left: 0;
+  color: white;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 510px;
+  margin: 0 0 30px;
   text-shadow: 0 1px 8px rgba(0,0,0,.15);
 }
 
-@media (max-width: 600px) {
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  background: var(--ink);
+  color: white;
+  padding: 15px 27px;
+  border: 1px solid var(--ink);
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.button:hover {
+  background: var(--rose);
+  border-color: var(--rose);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--ink);
+}
+
+.button-outline:hover {
+  color: white;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  max-width: 1180px;
+  margin: auto;
+  padding: 78px 5%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 37px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 580px;
+  margin: auto;
+}
+
+/* COLLECTIONS */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.category-card {
+  min-height: 260px;
+  background: #eee5dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  transition: transform .2s;
+}
+
+.category-card:nth-child(2) {
+  background: #e8ddd5;
+}
+
+.category-card:nth-child(3) {
+  background: #e9e6df;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+}
+
+.category-card small {
+  color: var(--rose);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.category-card h3 {
+  font-family: Georgia, serif;
+  font-size: 29px;
+  font-weight: 400;
+  margin: 10px 0 15px;
+}
+
+.category-card span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* FEATURED PRODUCTS */
+
+.featured {
+  background: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.product-card {
+  border: 1px solid var(--line);
+  background: white;
+  padding-bottom: 18px;
+  transition: box-shadow .2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 25px rgba(41,35,31,.08);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  background: var(--cream);
+}
+
+.product-info {
+  padding: 15px 14px 0;
+}
+
+.product-info small {
+  color: var(--rose);
+  font-size: 9px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.product-info h3 {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 9px 0;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.product-info .button {
+  width: 100%;
+  padding: 12px 8px;
+}
+
+/* BRAND STORY */
+
+.brand-note {
+  background: var(--cream);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.brand-note h2 {
+  font-family: Georgia, serif;
+  font-size: 37px;
+  font-weight: 400;
+  margin: 0 0 17px;
+}
+
+.brand-note p {
+  max-width: 620px;
+  margin: 0 auto 27px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* BENEFITS */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: white;
+}
+
+.benefit {
+  padding: 30px 15px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.benefit:last-child {
+  border-right: 0;
+}
+
+.benefit h3 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+
+.benefit p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* FOOTER */
+
+.footer {
+  background: var(--ink);
+  color: white;
+  padding: 48px 5% 25px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+.footer-logo span {
+  color: #d6aaa0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 19px;
+  flex-wrap: wrap;
+  margin: 23px 0;
+}
+
+.footer-links a {
+  color: #e8dfd8;
+  font-size: 10px;
+}
+
+.footer-links a:hover {
+  color: #d6aaa0;
+}
+
+.footer p {
+  color: #c9bfb8;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* WELCOME POPUP */
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 25, 22, .65);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 9999;
+}
+
+.popup-overlay.show {
+  display: flex;
+}
+
+.popup {
+  background: var(--paper);
+  width: 100%;
+  max-width: 490px;
+  padding: 48px 38px 35px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 70px rgba(0,0,0,.22);
+  animation: popupAppear .3s ease;
+}
+
+@keyframes popupAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.popup-eyebrow {
+  color: var(--rose);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.popup h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.15;
+  margin: 0 0 15px;
+}
+
+.popup p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 auto 22px;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.popup-form input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: white;
+  padding: 15px;
+  outline: none;
+  font-size: 13px;
+}
+
+.popup-form input:focus {
+  border-color: var(--rose);
+}
+
+.popup-form button {
+  width: 100%;
+}
+
+.popup-success {
+  display: none;
+  color: var(--rose);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+.popup-note {
+  font-size: 10px !important;
+  margin: 17px 0 0 !important;
+}
+
+.popup-continue {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero {
-    min-height: 540px;
-    padding: 65px 22px;
+    min-height: 520px;
+    padding: 70px 6%;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcement {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .nav {
+    gap: 13px;
+  }
+
+  .nav a {
+    font-size: 9px;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 60px 22px;
     background-position: 58% center;
   }
 
   .hero h1 {
-    font-size: 39px;
+    font-size: 42px;
   }
 
   .hero p {
     font-size: 13px;
   }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    min-height: 195px;
+  }
+
+  .section {
+    padding: 58px 5%;
+  }
+
+  .section-heading h2,
+  .brand-note h2 {
+    font-size: 30px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .benefit:last-child {
+    border-bottom: 0;
+  }
+
+  .popup {
+    padding: 45px 22px 30px;
+  }
+
+  .popup h2 {
+    font-size: 30px;
+  }
 }
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  THOUGHTFUL BEAUTY FINDS • EVERYDAY SELF-CARE
+</div>
+
+<header class="header">
+  <div class="header-inner">
+
+    <a class="logo" href="index.html">
+      TROVE <span>BEAUTY CO.</span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="search.html">Search</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Bag</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO BANNER -->
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Beauty • Self-Care • Everyday Essentials
+    </div>
+
+    <h1>
+      Little Finds.<br>
+      Lovely Everyday Rituals.
+    </h1>
+
+    <p>
+      Discover thoughtful beauty, hair care, makeup and self-care
+      essentials selected to bring a little more comfort and
+      confidence to your daily routine.
+    </p>
+
+    <a class="button" href="shop.html">
+      Explore the Collection
+    </a>
+
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+
+<section class="section">
+
+  <div class="section-heading">
+    <div class="eyebrow">Find Your Everyday Favorites</div>
+    <h2>Shop by Collection</h2>
+    <p>
+      Beauty and self-care finds for the moments that make your day.
+    </p>
+  </div>
+
+  <div class="category-grid">
+
+    <a class="category-card" href="shop.html">
+      <small>01 / Beauty</small>
+      <h3>Makeup</h3>
+      <span>Explore Makeup →</span>
+    </a>
+
+    <a class="category-card" href="shop.html">
+      <small>02 / Everyday Tools</small>
+      <h3>Beauty Tools</h3>
+      <span>Discover Tools →</span>
+    </a>
+
+    <a class="category-card" href="shop.html">
+      <small>03 / Daily Rituals</small>
+      <h3>Hair & Self-Care</h3>
+      <span>Explore Essentials →</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+
+<section class="featured">
+
+  <div class="section">
+
+    <div class="section-heading">
+      <div class="eyebrow">The Trove Edit</div>
+      <h2>Everyday Beauty Finds</h2>
+      <p>
+        Explore a preview of our makeup, beauty tools and self-care collection.
+      </p>
+    </div>
+
+    <div class="product-grid">
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+          alt="Makeup and beauty essentials"
+          loading="lazy">
+
+        <div class="product-info">
+          <small>Makeup</small>
+          <h3>Volumizing Mascara</h3>
+          <div class="price">$19.99</div>
+          <a class="button" href="shop.html">Explore Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=80"
+          alt="Makeup brushes and beauty tools"
+          loading="lazy">
+
+        <div class="product-info">
+          <small>Beauty Tools</small>
+          <h3>18-Piece Makeup Brush Set</h3>
+          <div class="price">$29.99</div>
+          <a class="button" href="shop.html">Explore Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
+          alt="Beauty and self-care collection"
+          loading="lazy">
+
+        <div class="product-info">
+          <small>Self-Care</small>
+          <h3>Everyday Self-Care Find</h3>
+          <div class="price">$24.99</div>
+          <a class="button" href="shop.html">Explore Product</a>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img
+          src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=700&q=80"
+          alt="Skincare and beauty essentials"
+          loading="lazy">
+
+        <div class="product-info">
+          <small>Beauty Tools</small>
+          <h3>Beauty Essentials</h3>
+          <div class="price">$24.99</div>
+          <a class="button" href="shop.html">Explore Product</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="text-align:center;margin-top:38px;">
+      <a class="button button-outline" href="shop.html">
+        View All Products
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+
+<section class="brand-note">
+
+  <div class="eyebrow">A Little More You</div>
+
+  <h2>Beauty for Your Everyday</h2>
+
+  <p>
+    At Trove Beauty Co., we bring together makeup, hair care,
+    beauty tools and everyday self-care finds. Our online collection
+    is designed to make discovering your next beauty essential
+    simple and enjoyable.
+  </p>
+
+  <a class="button" href="about.html">Discover Our Story</a>
+
+</section>
+
+<!-- STORE INFORMATION -->
+
+<section class="benefits">
+
+  <div class="benefit">
+    <h3>Thoughtful Finds</h3>
+    <p>Beauty and self-care essentials for everyday routines.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>Online Shopping</h3>
+    <p>Explore our collection from wherever you are.</p>
+  </div>
+
+  <div class="benefit">
+    <h3>Here to Help</h3>
+    <p>Questions about an order? Visit our Contact page.</p>
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="footer-logo">
+    TROVE <span>BEAUTY CO.</span>
+  </div>
+
+  <p>Thoughtful beauty finds for everyday rituals.</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="search.html">Search</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="shipping.html">Shipping</a>
+    <a href="returns.html">Returns</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="legal.html">Legal Notice</a>
+  </div>
+
+  <p>
+    Contact:
+    <a href="mailto:contacts@thetradetrove.com">
+      contacts@thetradetrove.com
+    </a>
+  </p>
+
+  <p>© 2026 Trove Beauty Co. All rights reserved.</p>
+  <p>Operated by Trade Trove LLC.</p>
+
+</footer>
+
+<!-- WELCOME POPUP -->
+
+<div
+  class="popup-overlay"
+  id="welcomeOverlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="welcomeTitle">
+
+  <div class="popup">
+
+    <button
+      class="popup-close"
+      id="popupClose"
+      aria-label="Close welcome popup">
+      &times;
+    </button>
+
+    <div class="popup-eyebrow">
+      Welcome to Trove
+    </div>
+
+    <h2 id="welcomeTitle">
+      A Little Beauty<br>
+      Something for You
+    </h2>
+
+    <p>
+      Discover thoughtful beauty finds, everyday essentials
+      and inspiration for your self-care routine.
+    </p>
+
+    <form class="popup-form" id="welcomeForm">
+
+      <input
+        type="email"
+        id="welcomeEmail"
+        placeholder="Enter your email address"
+        aria-label="Email address"
+        autocomplete="email"
+        required>
+
+      <button class="button" type="submit">
+        Join the Trove List
+      </button>
+
+    </form>
+
+    <div class="popup-success" id="popupSuccess" role="status">
+      Thank you for your interest in Trove Beauty Co.
+      Email signup is currently a preview feature.
+    </div>
+
+    <p class="popup-note">
+      No pressure. Just beauty inspiration and everyday finds.
+    </p>
+
+    <button class="popup-continue" id="popupContinue">
+      Continue Shopping
+    </button>
+
+  </div>
+</div>
+
+<script>
+(function () {
+
+  const overlay = document.getElementById("welcomeOverlay");
+  const closeButton = document.getElementById("popupClose");
+  const continueButton = document.getElementById("popupContinue");
+  const form = document.getElementById("welcomeForm");
+  const success = document.getElementById("popupSuccess");
+
+  const sessionKey = "troveWelcomePopupSeen";
+
+  function closePopup() {
+    overlay.classList.remove("show");
+    sessionStorage.setItem(sessionKey, "yes");
+  }
+
+  closeButton.addEventListener("click", closePopup);
+  continueButton.addEventListener("click", closePopup);
+
+  overlay.addEventListener("click", function (event) {
+    if (event.target === overlay) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (
+      event.key === "Escape" &&
+      overlay.classList.contains("show")
+    ) {
+      closePopup();
+    }
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    success.style.display = "block";
+    form.style.display = "none";
+
+    sessionStorage.setItem(sessionKey, "yes");
+  });
+
+  if (!sessionStorage.getItem(sessionKey)) {
+    setTimeout(function () {
+      overlay.classList.add("show");
+    }, 1200);
+  }
+
+})();
+</script>
+
+</body>
+</html>

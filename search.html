@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -363,4 +364,985 @@ footer{
   margin-bottom:10px;
 }
 
-.footer
+.footer-logo span{
+  color:#c79b91;
+}
+
+.footer-text{
+  color:#cfc7c0;
+  font-size:12px;
+  margin-bottom:20px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-bottom:20px;
+}
+
+.footer-links a{
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.footer-links a:hover{
+  color:#c79b91;
+}
+
+.copyright{
+  color:#9f9690;
+  font-size:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .header-inner{
+    flex-direction:column;
+  }
+
+  nav{
+    justify-content:center;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:600px){
+
+  .topbar{
+    font-size:9px;
+    letter-spacing:1px;
+  }
+
+  .header-inner{
+    padding:17px 5%;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  nav{
+    gap:12px;
+  }
+
+  nav a{
+    font-size:9px;
+    letter-spacing:.8px;
+  }
+
+  .hero{
+    padding:50px 20px;
+  }
+
+  .hero h1{
+    font-size:35px;
+  }
+
+  .main{
+    padding:40px 5% 55px;
+  }
+
+  .search-form{
+    flex-direction:column;
+  }
+
+  .search-button{
+    padding:13px;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .product-image{
+    height:220px;
+  }
+
+  .product-info{
+    padding:12px;
+  }
+
+  .name{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:13px;
+  }
+
+  .add{
+    font-size:9px;
+    padding:10px 5px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+  Thoughtful Beauty Finds • Everyday Self-Care
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="header-inner">
+
+    <a href="index.html" class="logo">
+      TROVE <span>BEAUTY CO.</span>
+    </a>
+
+    <nav>
+
+      <a href="index.html">Home</a>
+
+      <a href="shop.html">Shop</a>
+
+      <a href="search.html">Search</a>
+
+      <a href="about.html">About</a>
+
+      <a href="contact.html">Contact</a>
+
+      <a href="cart.html">
+        BAG <span class="bag-count" id="bagCount">0</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="eyebrow">
+    FIND YOUR FAVORITES
+  </div>
+
+  <h1>
+    Search Trove Beauty
+  </h1>
+
+  <p>
+    Explore makeup, beauty tools, hair care, self-care and everyday beauty essentials.
+  </p>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+
+  <!-- SEARCH -->
+
+  <div class="search-area">
+
+    <form class="search-form" id="searchForm">
+
+      <input
+        class="search-input"
+        id="searchInput"
+        type="search"
+        placeholder="Search products..."
+        autocomplete="off"
+      >
+
+      <button class="search-button" type="submit">
+        Search
+      </button>
+
+    </form>
+
+  </div>
+
+
+  <!-- FILTERS -->
+
+  <div class="filters">
+
+    <button class="filter active" data-category="All">
+      All Products
+    </button>
+
+    <button class="filter" data-category="Makeup">
+      Makeup
+    </button>
+
+    <button class="filter" data-category="Beauty Tools">
+      Beauty Tools
+    </button>
+
+    <button class="filter" data-category="Hair Care">
+      Hair Care
+    </button>
+
+    <button class="filter" data-category="Self-Care">
+      Self-Care
+    </button>
+
+  </div>
+
+
+  <!-- RESULTS -->
+
+  <div class="results">
+
+    <span>
+      Showing <strong id="resultNumber">8</strong> products
+    </span>
+
+    <span id="categoryName">
+      All Products
+    </span>
+
+  </div>
+
+
+  <!-- PRODUCTS -->
+
+  <div class="product-grid" id="productGrid">
+
+
+    <!-- 1 -->
+
+    <div
+      class="product"
+      data-name="Volumizing Mascara"
+      data-category="Makeup"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1631214524020-7e18db9e8f08?auto=format&fit=crop&w=700&q=80"
+        alt="Volumizing Mascara"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          CJdropshipping
+        </div>
+
+        <div class="name">
+          Volumizing Mascara
+        </div>
+
+        <div class="category">
+          Makeup
+        </div>
+
+        <div class="price">
+          $19.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Volumizing Mascara', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 2 -->
+
+    <div
+      class="product"
+      data-name="18-Piece Makeup Brush Set"
+      data-category="Beauty Tools"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+        alt="18-Piece Makeup Brush Set"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          CJdropshipping
+        </div>
+
+        <div class="name">
+          18-Piece Makeup Brush Set
+        </div>
+
+        <div class="category">
+          Beauty Tools
+        </div>
+
+        <div class="price">
+          $29.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('18-Piece Makeup Brush Set', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 3 -->
+
+    <div
+      class="product"
+      data-name="Microfiber Hair Towel Wrap"
+      data-category="Hair Care"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80"
+        alt="Microfiber Hair Towel Wrap"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          EPROLO
+        </div>
+
+        <div class="name">
+          Microfiber Hair Towel Wrap
+        </div>
+
+        <div class="category">
+          Hair Care
+        </div>
+
+        <div class="price">
+          $34.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Microfiber Hair Towel Wrap', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 4 -->
+
+    <div
+      class="product"
+      data-name="Everyday Self-Care Find"
+      data-category="Self-Care"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80"
+        alt="Everyday Self-Care Find"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          EPROLO
+        </div>
+
+        <div class="name">
+          Everyday Self-Care Find
+        </div>
+
+        <div class="category">
+          Self-Care
+        </div>
+
+        <div class="price">
+          $24.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Everyday Self-Care Find', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 5 -->
+
+    <div
+      class="product"
+      data-name="Portable LED Makeup Mirror"
+      data-category="Beauty Tools"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
+        alt="Portable LED Makeup Mirror"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          CJdropshipping
+        </div>
+
+        <div class="name">
+          Portable LED Makeup Mirror
+        </div>
+
+        <div class="category">
+          Beauty Tools
+        </div>
+
+        <div class="price">
+          $32.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Portable LED Makeup Mirror', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 6 -->
+
+    <div
+      class="product"
+      data-name="Satin Sleep Bonnet"
+      data-category="Hair Care"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=700&q=80"
+        alt="Satin Sleep Bonnet"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          EPROLO
+        </div>
+
+        <div class="name">
+          Satin Sleep Bonnet
+        </div>
+
+        <div class="category">
+          Hair Care
+        </div>
+
+        <div class="price">
+          $34.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Satin Sleep Bonnet', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 7 -->
+
+    <div
+      class="product"
+      data-name="Jelly Lip Oil"
+      data-category="Makeup"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=700&q=80"
+        alt="Jelly Lip Oil"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          CJdropshipping
+        </div>
+
+        <div class="name">
+          Jelly Lip Oil
+        </div>
+
+        <div class="category">
+          Makeup
+        </div>
+
+        <div class="price">
+          $14.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Jelly Lip Oil', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- 8 -->
+
+    <div
+      class="product"
+      data-name="Eye & Face Ice Roller"
+      data-category="Beauty Tools"
+    >
+
+      <img
+        class="product-image"
+        src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=80"
+        alt="Eye and Face Ice Roller"
+      >
+
+      <div class="product-info">
+
+        <div class="source">
+          CJdropshipping
+        </div>
+
+        <div class="name">
+          Eye &amp; Face Ice Roller
+        </div>
+
+        <div class="category">
+          Beauty Tools
+        </div>
+
+        <div class="price">
+          $24.99
+        </div>
+
+        <button
+          class="add"
+          onclick="addToBag('Eye & Face Ice Roller', this)"
+        >
+          Add to Bag
+        </button>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- NO RESULTS -->
+
+  <div class="no-results" id="noResults">
+
+    <h2>
+      No products found
+    </h2>
+
+    <p>
+      Try another search term or choose a different category.
+    </p>
+
+  </div>
+
+
+</main>
+
+
+<!-- NOTE -->
+
+<section class="note">
+
+  <h2>
+    Beauty Finds, Thoughtfully Chosen
+  </h2>
+
+  <p>
+    Trove Beauty Co. brings together makeup, beauty tools, hair care,
+    self-care and everyday beauty essentials in one simple online collection.
+  </p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-logo">
+    TROVE <span>BEAUTY CO.</span>
+  </div>
+
+  <div class="footer-text">
+    Store preview — live checkout is not connected.
+  </div>
+
+  <div class="footer-links">
+
+    <a href="faq.html">FAQ</a>
+
+    <a href="privacy.html">Privacy</a>
+
+    <a href="terms.html">Terms</a>
+
+    <a href="shipping.html">Shipping</a>
+
+    <a href="returns.html">Returns</a>
+
+    <a href="legal.html">Legal Notice</a>
+
+    <a href="contact.html">Contact Us</a>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 Trove Beauty Co. All rights reserved.
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   TROVE BEAUTY CART
+   ========================= */
+
+var CART_KEY = "troveBeautyCart";
+
+
+function getCart(){
+
+  try{
+
+    var saved = localStorage.getItem(CART_KEY);
+
+    if(saved){
+
+      return JSON.parse(saved);
+
+    }
+
+  }catch(error){
+
+    console.log("Cart error:", error);
+
+  }
+
+  return [];
+
+}
+
+
+function saveCart(cart){
+
+  try{
+
+    localStorage.setItem(
+      CART_KEY,
+      JSON.stringify(cart)
+    );
+
+  }catch(error){
+
+    console.log("Unable to save cart:", error);
+
+  }
+
+}
+
+
+function updateBagCount(){
+
+  var cart = getCart();
+
+  var total = 0;
+
+  for(var i = 0; i < cart.length; i++){
+
+    total += Number(cart[i].quantity) || 0;
+
+  }
+
+  var bag = document.getElementById("bagCount");
+
+  if(bag){
+
+    bag.innerHTML = total;
+
+  }
+
+}
+
+
+function addToBag(productName, button){
+
+  var cart = getCart();
+
+  var found = false;
+
+  for(var i = 0; i < cart.length; i++){
+
+    if(cart[i].name === productName){
+
+      cart[i].quantity =
+        Number(cart[i].quantity || 0) + 1;
+
+      found = true;
+
+      break;
+
+    }
+
+  }
+
+
+  if(!found){
+
+    cart.push({
+      name:productName,
+      quantity:1
+    });
+
+  }
+
+
+  saveCart(cart);
+
+  updateBagCount();
+
+
+  if(button){
+
+    var oldText = button.innerHTML;
+
+    button.innerHTML = "Added to Bag";
+
+    button.classList.add("done");
+
+
+    setTimeout(function(){
+
+      button.innerHTML = oldText;
+
+      button.classList.remove("done");
+
+    },1200);
+
+  }
+
+}
+
+
+/* =========================
+   SEARCH
+   ========================= */
+
+var searchInput =
+  document.getElementById("searchInput");
+
+var searchForm =
+  document.getElementById("searchForm");
+
+var products =
+  document.querySelectorAll(".product");
+
+var resultNumber =
+  document.getElementById("resultNumber");
+
+var noResults =
+  document.getElementById("noResults");
+
+var categoryName =
+  document.getElementById("categoryName");
+
+var filters =
+  document.querySelectorAll(".filter");
+
+
+var selectedCategory = "All";
+
+
+function filterProducts(){
+
+  var searchText =
+    searchInput.value.toLowerCase().trim();
+
+  var visible = 0;
+
+
+  for(var i = 0; i < products.length; i++){
+
+    var product = products[i];
+
+    var name =
+      product.getAttribute("data-name").toLowerCase();
+
+    var category =
+      product.getAttribute("data-category");
+
+
+    var searchMatch =
+      name.indexOf(searchText) !== -1;
+
+
+    var categoryMatch =
+      selectedCategory === "All" ||
+      category === selectedCategory;
+
+
+    if(searchMatch && categoryMatch){
+
+      product.style.display = "";
+
+      visible++;
+
+    }else{
+
+      product.style.display = "none";
+
+    }
+
+  }
+
+
+  resultNumber.innerHTML = visible;
+
+
+  if(selectedCategory === "All"){
+
+    categoryName.innerHTML = "All Products";
+
+  }else{
+
+    categoryName.innerHTML = selectedCategory;
+
+  }
+
+
+  if(visible === 0){
+
+    noResults.style.display = "block";
+
+  }else{
+
+    noResults.style.display = "none";
+
+  }
+
+}
+
+
+/* LIVE SEARCH */
+
+searchInput.addEventListener(
+  "input",
+  function(){
+
+    filterProducts();
+
+  }
+);
+
+
+/* SEARCH BUTTON */
+
+searchForm.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+    filterProducts();
+
+  }
+);
+
+
+/* CATEGORY BUTTONS */
+
+for(var i = 0; i < filters.length; i++){
+
+  filters[i].addEventListener(
+    "click",
+    function(){
+
+      for(var x = 0; x < filters.length; x++){
+
+        filters[x].classList.remove("active");
+
+      }
+
+      this.classList.add("active");
+
+      selectedCategory =
+        this.getAttribute("data-category");
+
+      filterProducts();
+
+    }
+  );
+
+}
+
+
+/* START */
+
+updateBagCount();
+
+filterProducts();
+
+</script>
+
+</body>
+</html>

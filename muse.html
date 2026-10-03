@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muse | Beauty Inspiration & Self-Care | Trove Beauty Co.</title>
+
+<meta name="description" content="Explore beauty inspiration, makeup tips, hair care routines, skincare rituals and everyday self-care ideas with Trove Beauty Co. Muse.">
+
+<meta name="keywords" content="beauty tips, makeup inspiration, hair care, self care, beauty routines, Trove Beauty Co.">
+
+<meta name="author" content="Trove Beauty Co.">
+<meta name="theme-color" content="#faf8f4">
+
+<link rel="canonical" href="https://website.thetradetrove.com/muse.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #29231f;
+  --paper: #faf8f4;
+  --rose: #b98479;
+  --rose-dark: #8e5f56;
+  --line: #e7dfd6;
+  --muted: #766e67;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: min(1180px, 91%);
+  margin: auto;
+}
+
+.announcement {
+  background: var(--ink);
+  color: white;
+  text-align: center;
+  padding: 9px 12px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(250,248,244,.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -.7px;
+}
+
+.brand small {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: -4px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 12px;
+}
+
+.nav-links a {
+  transition: color .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--rose-dark);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 23px;
+}
+
+.hero {
+  padding: 70px 0 75px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 460px;
+  background: #f0e8df;
+}
+
+.hero-copy {
+  padding: 65px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--rose-dark);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  line-height: 1.17;
+}
+
+h1 {
+  font-size: clamp(48px, 6vw, 76px);
+  margin: 18px 0;
+  letter-spacing: -2px;
+}
+
+.hero-copy p {
+  max-width: 430px;
+  color: #625951;
+  font-size: 14px;
+  margin: 0 0 27px;
+}
+
+.hero-image {
+  min-height: 460px;
+  background: #e5d6ca;
+}
+
+.hero-image img {
+  height: 100%;
+  min-height: 460px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: var(--ink);
+  color: white;
+  padding: 14px 25px;
+  border: 1px solid var(--ink);
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: var(--rose-dark);
+  border-color: var(--rose-dark);
+}
+
+.section {
+  padding: 65px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(32px, 4vw, 45px);
+  margin: 10px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.topic {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  background: #e8ddd3;
+}
+
+.topic img {
+  height: 250px;
+  transition: transform .5s;
+}
+
+.topic:hover img {
+  transform: scale(1.04);
+}
+
+.topic-label {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 30px 20px 18px;
+  color: white;
+  background: linear-gradient(transparent, rgba(25,20,17,.72));
+}
+
+.topic-label h3 {
+  font-size: 26px;
+  margin: 0;
+}
+
+.topic-label span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.featured {
+  background: #f1ebe4;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.article-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(41,35,31,.07);
+}
+
+.article-card img {
+  height: 255px;
+}
+
+.article-body {
+  padding: 22px;
+}
+
+.article-category {
+  font-size: 9px;
+  color: var(--rose-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.article-body h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.article-body p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.read-link {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--rose);
+  padding-bottom: 5px;
+}
+
+.editor-note {
+  padding: 85px 20px;
+  text-align: center;
+}
+
+.editor-note blockquote {
+  max-width: 760px;
+  margin: 20px auto;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(27px, 4vw, 42px);
+  line-height: 1.35;
+}
+
+.newsletter {
+  background: #e9ddd3;
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 38px;
+  margin: 8px 0;
+}
+
+.newsletter p {
+  color: #655c55;
+  font-size: 13px;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 460px;
+  margin: 25px auto 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #d4c5ba;
+  background: white;
+  outline: none;
+}
+
+.newsletter-form button {
+  border: 0;
+  background: var(--ink);
+  color: white;
+  padding: 0 19px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+footer {
+  background: var(--ink);
+  color: #f9f5f0;
+  padding: 55px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 35px;
+}
+
+.footer-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+}
+
+.footer-grid p,
+.footer-grid a {
+  color: #c6bdb5;
+  font-size: 12px;
+}
+
+.footer-grid h4 {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #514943;
+  margin-top: 35px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #b9afa7;
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    min-height: 65px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    padding: 22px 5%;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
+  .hero {
+    padding: 25px 0 45px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 45px 8%;
+  }
+
+  .hero-image,
+  .hero-image img {
+    min-height: 300px;
+    max-height: 350px;
+  }
+
+  .topic-grid,
+  .article-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+  }
+
+  .topic img {
+    height: 200px;
+  }
+
+  .article-card img {
+    height: 180px;
+  }
+
+  .article-body {
+    padding: 15px;
+  }
+
+  .article-body h3 {
+    font-size: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 460px) {
+  .topic-grid,
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic img {
+    height: 245px;
+  }
+
+  .article-card img {
+    height: 240px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .newsletter-form button {
+    min-height: 46px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="announcement">
+  A little inspiration for your everyday glow
+</div>
+
+<header>
+  <div class="container nav">
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+    <a class="brand" href="index.html">
+      Trove Beauty Co.
+      <small>Beauty • Self-Care • You</small>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="beauty-tools.html">Beauty Tools</a>
+      <a href="hair-care.html">Hair Care</a>
+      <a href="muse.html" class="active">Muse</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="shop.html">Shop <span aria-hidden="true">↗</span></a>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div class="hero-copy">
+      <span class="eyebrow">The Trove Beauty Edit</span>
+
+      <h1>A little muse for your everyday glow.</h1>
+
+      <p>
+        Discover thoughtful beauty ideas, simple rituals, hair-care inspiration,
+        and little moments of self-care made for real life.
+      </p>
+
+      <a href="#latest" class="btn">Explore the Edit</a>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85"
+        alt="Soft beauty inspiration and makeup essentials"
+        fetchpriority="high">
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">Find Your Inspiration</span>
+      <h2>Explore the Edit</h2>
+      <p>Little ideas for every part of your beauty routine.</p>
+    </div>
+
+    <div class="topic-grid">
+
+      <a class="topic" href="#makeup">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80" alt="Makeup brushes and cosmetics" loading="lazy">
+        <div class="topic-label">
+          <span>01 / Beauty</span>
+          <h3>Makeup</h3>
+        </div>
+      </a>
+
+      <a class="topic" href="#hair">
+        <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Hair care and styling inspiration" loading="lazy">
+        <div class="topic-label">
+          <span>02 / Rituals</span>
+          <h3>Hair Care</h3>
+        </div>
+      </a>
+
+      <a class="topic" href="#selfcare">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=800&q=80" alt="Self-care and skincare essentials" loading="lazy">
+        <div class="topic-label">
+          <span>03 / Wellbeing</span>
+          <h3>Self-Care</h3>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section featured" id="latest">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">Fresh From Muse</span>
+      <h2>Ideas Worth Keeping</h2>
+      <p>Beauty inspiration to save, revisit, and make your own.</p>
+    </div>
+
+    <div class="article-grid">
+
+      <article class="article-card" id="makeup">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=85" alt="Makeup essentials arranged on a vanity" loading="lazy">
+        <div class="article-body">
+          <span class="article-category">Makeup</span>
+          <h3>The Art of an Everyday Makeup Routine</h3>
+          <p>Explore a simple approach to creating a polished everyday look with the products you already love.</p>
+          <a href="shop.html" class="read-link">Explore Beauty Products →</a>
+        </div>
+      </article>
+
+      <article class="article-card" id="hair">
+        <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=85" alt="Hair styling and hair care inspiration" loading="lazy">
+        <div class="article-body">
+          <span class="article-category">Hair Care</span>
+          <h3>Small Hair-Care Rituals to Try at Home</h3>
+          <p>Discover gentle, practical ideas for making your hair-care routine feel more intentional.</p>
+          <a href="hair-care.html" class="read-link">Explore Hair Care →</a>
+        </div>
+      </article>
+
+      <article class="article-card" id="selfcare">
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=900&q=85" alt="Skincare and self-care products" loading="lazy">
+        <div class="article-body">
+          <span class="article-category">Self-Care</span>
+          <h3>Make a Little Space for Yourself</h3>
+          <p>Simple ways to bring a calmer, more thoughtful feeling into your everyday self-care moments.</p>
+          <a href="beauty-tools.html" class="read-link">Discover Beauty Tools →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="editor-note">
+  <span class="eyebrow">A Note From Trove</span>
+  <blockquote>
+    “Beauty isn't about doing more. Sometimes it's about finding joy in the little things you already do.”
+  </blockquote>
+  <a href="about.html" class="read-link">Our Story →</a>
+</section>
+
+<section class="newsletter">
+  <span class="eyebrow">A Little Note From Us</span>
+  <h2>Stay in the Trove</h2>
+  <p>Beauty inspiration, new arrivals, and thoughtful little updates.</p>
+
+  <form class="newsletter-form" id="newsletterForm">
+    <input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Your email address" required>
+    <button type="submit">Join Us</button>
+  </form>
+
+  <div class="form-note" id="formNote">
+    Demo signup only. Email addresses are not collected or stored.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">Trove Beauty Co.</div>
+        <p>Beauty, self-care, and everyday essentials, thoughtfully discovered.</p>
+        <p>Follow our beauty moments on Instagram.</p>
+        <a href="https://www.instagram.com/trovebeautyco/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+
+      <div>
+        <h4>Discover</h4>
+        <div class="footer-links">
+          <a href="shop.html">Shop All</a>
+          <a href="beauty-tools.html">Beauty Tools</a>
+          <a href="hair-care.html">Hair Care</a>
+          <a href="muse.html">Muse</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>About</h4>
+        <div class="footer-links">
+          <a href="about.html">Our Story</a>
+          <a href="contact.html">Contact</a>
+          <a href="shipping.html">Shipping</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Information</h4>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms</a>
+          <a href="returns.html">Returns</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Trove Beauty Co. All rights reserved.</span>
+      <span>Designed with care for your everyday glow.</span>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "×" : "☰";
+});
+
+navLinks.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("newsletterForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  document.getElementById("formNote").textContent =
+    "Thank you for your interest! This is a demo signup; no email was saved.";
+
+  document.getElementById("newsletterEmail").value = "";
+});
+</script>
+
+</body>
+</html>

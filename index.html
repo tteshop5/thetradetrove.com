@@ -6,15 +6,11 @@
 
   <title>Trove Beauty Co. | Beauty, Self-Care & Beauty Tools</title>
 
-  <meta
-    name="description"
-    content="Discover makeup, hair care, beauty tools, self-care and everyday beauty essentials at Trove Beauty Co."
-  >
+  <meta name="description"
+    content="Discover makeup, hair care, beauty tools, self-care and everyday beauty essentials at Trove Beauty Co.">
 
-  <meta
-    name="keywords"
-    content="beauty, makeup, hair care, beauty tools, self care, cosmetics, Trove Beauty Co."
-  >
+  <meta name="keywords"
+    content="Trove Beauty Co, makeup, beauty tools, hair care, self care, beauty essentials">
 
   <meta name="robots" content="index, follow">
 
@@ -29,6 +25,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -44,8 +41,9 @@
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       display: block;
+      object-fit: cover;
     }
 
     button,
@@ -53,34 +51,92 @@
       font: inherit;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading span {
+      color: #a85e68;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin: 8px 0;
+    }
+
+    .section-heading p {
+      color: #806f6f;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      background: #a85e68;
+      color: white;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid #a85e68;
+      transition: .2s;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #874b55;
+      border-color: #874b55;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: #874b55;
+    }
+
+    .button-outline:hover {
+      color: white;
+    }
+
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 250, 247, 0.97);
+      background: rgba(255, 250, 247, .98);
       border-bottom: 1px solid #eaded9;
       backdrop-filter: blur(10px);
     }
 
     .topbar {
-      max-width: 1250px;
-      margin: auto;
       min-height: 82px;
-      padding: 14px 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 20px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       min-width: 190px;
     }
 
@@ -98,14 +154,14 @@
 
     .brand-text strong {
       display: block;
-      font-size: 22px;
-      letter-spacing: .5px;
+      font-size: 20px;
+      letter-spacing: .4px;
     }
 
     .brand-text span {
       display: block;
       font-family: Arial, sans-serif;
-      font-size: 10px;
+      font-size: 9px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #907878;
@@ -114,15 +170,9 @@
     nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 24px;
+      gap: 20px;
       font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-
-    nav a {
-      position: relative;
-      padding: 8px 0;
+      font-size: 13px;
     }
 
     nav a:hover {
@@ -132,67 +182,36 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 9px;
+      gap: 8px;
     }
 
     .icon-button {
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border: 1px solid #dfceca;
-      background: #fff;
+      background: white;
       border-radius: 50%;
       display: grid;
       place-items: center;
       cursor: pointer;
-      transition: .2s;
     }
 
     .icon-button:hover {
       background: #f8e7e8;
-      transform: translateY(-1px);
-    }
-
-    .cart-button {
-      border: none;
-      background: #a85e68;
-      color: white;
-      border-radius: 24px;
-      padding: 11px 17px;
-      cursor: pointer;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .cart-button:hover {
-      background: #874b55;
-    }
-
-    .account-button {
-      border: 1px solid #cdaeb0;
-      background: #fff;
-      color: #71474d;
-      border-radius: 24px;
-      padding: 10px 15px;
-      cursor: pointer;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      font-weight: bold;
     }
 
     .mobile-menu {
       display: none;
+      border: 1px solid #dfceca;
+      background: white;
+      padding: 9px 12px;
+      border-radius: 8px;
+      cursor: pointer;
     }
-
-    /* =========================
-       SEARCH
-    ========================= */
 
     .search-area {
       display: none;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 15px 20px;
+      padding: 14px 0;
     }
 
     .search-area.active {
@@ -209,219 +228,132 @@
 
     .search-box input {
       flex: 1;
+      min-width: 0;
       border: none;
       outline: none;
-      padding: 14px 20px;
-      background: transparent;
+      padding: 13px 18px;
     }
 
     .search-box button {
       border: none;
       background: #a85e68;
       color: white;
-      padding: 0 24px;
+      padding: 0 22px;
       cursor: pointer;
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
-      min-height: 650px;
+      min-height: 570px;
       display: flex;
       align-items: center;
       background:
         linear-gradient(
           90deg,
           rgba(255,250,247,.98) 0%,
-          rgba(255,250,247,.92) 43%,
-          rgba(255,250,247,.35) 72%,
-          rgba(255,250,247,.05) 100%
+          rgba(255,250,247,.90) 43%,
+          rgba(255,250,247,.25) 100%
         ),
         url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1800&q=85")
         center/cover no-repeat;
     }
 
     .hero-content {
-      max-width: 1250px;
-      width: 100%;
-      margin: auto;
-      padding: 80px 25px;
+      padding: 80px 0;
+      max-width: 620px;
     }
 
     .eyebrow {
       font-family: Arial, sans-serif;
       text-transform: uppercase;
       letter-spacing: 3px;
-      font-size: 12px;
+      font-size: 11px;
       color: #a85e68;
-      margin-bottom: 17px;
+      margin-bottom: 16px;
       font-weight: bold;
     }
 
     .hero h1 {
-      max-width: 610px;
-      font-size: clamp(45px, 6vw, 76px);
-      line-height: 1.02;
-      font-weight: 500;
-      margin-bottom: 24px;
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.08;
+      margin-bottom: 20px;
+      color: #352b2b;
     }
 
     .hero p {
-      max-width: 540px;
       font-family: Arial, sans-serif;
-      color: #665858;
-      font-size: 17px;
-      margin-bottom: 32px;
+      color: #6f5d5d;
+      font-size: 15px;
+      max-width: 490px;
+      margin-bottom: 28px;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    /* PROMO STRIP */
 
-    .primary-btn,
-    .secondary-btn {
-      display: inline-block;
-      padding: 14px 25px;
-      border-radius: 30px;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .primary-btn {
-      background: #a85e68;
-      color: white;
-    }
-
-    .secondary-btn {
-      border: 1px solid #b98c90;
-      color: #754d53;
-      background: rgba(255,255,255,.7);
-    }
-
-    /* =========================
-       MISSION
-    ========================= */
-
-    .mission {
-      max-width: 1050px;
-      margin: auto;
-      padding: 75px 25px;
+    .promo-strip {
+      background: #f4e4e2;
       text-align: center;
-    }
-
-    .mission h2 {
-      font-size: 38px;
-      font-weight: 500;
-      margin-bottom: 18px;
-    }
-
-    .mission p {
-      max-width: 760px;
-      margin: auto;
-      color: #6d6060;
+      padding: 13px;
       font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: .5px;
+      color: #71474d;
     }
 
-    /* =========================
-       CATEGORIES
-    ========================= */
-
-    .section {
-      max-width: 1250px;
-      margin: auto;
-      padding: 65px 25px;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-      font-size: 38px;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    .section-heading p {
-      color: #766767;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
+    /* CATEGORIES */
 
     .category-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .category-card {
-      min-height: 350px;
-      border-radius: 18px;
-      overflow: hidden;
       position: relative;
-      background-size: cover;
-      background-position: center;
+      min-height: 330px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f3e5e1;
+    }
+
+    .category-card img {
+      height: 330px;
+      transition: transform .4s;
+    }
+
+    .category-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .category-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(34, 23, 23, .72),
+        transparent 70%
+      );
       display: flex;
-      align-items: flex-end;
-    }
-
-    .category-card:nth-child(1) {
-      background-image:
-        linear-gradient(transparent 35%, rgba(35,20,20,.72)),
-        url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .category-card:nth-child(2) {
-      background-image:
-        linear-gradient(transparent 35%, rgba(35,20,20,.72)),
-        url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .category-card:nth-child(3) {
-      background-image:
-        linear-gradient(transparent 35%, rgba(35,20,20,.72)),
-        url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80");
-    }
-
-    .category-content {
-      color: white;
+      flex-direction: column;
+      justify-content: flex-end;
       padding: 25px;
+      color: white;
     }
 
-    .category-content h3 {
-      font-size: 28px;
-      font-weight: 500;
-      margin-bottom: 5px;
+    .category-overlay h3 {
+      font-size: 26px;
+      margin-bottom: 7px;
     }
 
-    .category-content p {
+    .category-overlay a {
       font-family: Arial, sans-serif;
       font-size: 13px;
-      margin-bottom: 12px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
-    .category-content a {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-bottom: 1px solid white;
-      padding-bottom: 3px;
-    }
-
-    /* =========================
-       PRODUCTS
-    ========================= */
-
-    .products {
-      background: #f8edeb;
-    }
+    /* PRODUCTS */
 
     .product-grid {
       display: grid;
@@ -431,1429 +363,87 @@
 
     .product-card {
       background: white;
-      border-radius: 15px;
+      border: 1px solid #eee2de;
+      border-radius: 12px;
       overflow: hidden;
-      border: 1px solid #eaded9;
+      transition: .25s;
     }
 
-    .product-image {
-      aspect-ratio: 1 / 1;
-      background: #f4e8e5;
-      overflow: hidden;
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(70, 40, 40, .08);
     }
 
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: .35s;
-    }
-
-    .product-card:hover img {
-      transform: scale(1.04);
+    .product-card img {
+      height: 245px;
+      background: #f6eeeb;
     }
 
     .product-info {
-      padding: 17px;
+      padding: 18px;
+    }
+
+    .product-info small {
+      font-family: Arial, sans-serif;
+      color: #a85e68;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .product-info h3 {
-      font-size: 17px;
-      font-weight: 500;
-      margin-bottom: 7px;
+      font-size: 18px;
+      margin: 7px 0;
     }
 
     .product-info p {
       font-family: Arial, sans-serif;
-      font-size: 13px;
-      color: #766767;
-      margin-bottom: 12px;
+      font-size: 12px;
+      color: #806f6f;
+      margin-bottom: 14px;
     }
 
-    .price {
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      color: #9b5962;
-      margin-bottom: 13px;
-    }
-
-    .product-btn {
-      width: 100%;
-      border: 1px solid #cdaeb0;
-      background: #fff;
-      color: #754d53;
-      padding: 10px;
-      border-radius: 20px;
-      cursor: pointer;
+    .product-link {
+      display: inline-block;
       font-family: Arial, sans-serif;
       font-size: 12px;
+      color: #a85e68;
       font-weight: bold;
     }
 
-    .product-btn:hover {
-      background: #f8e7e8;
+    .product-link:hover {
+      text-decoration: underline;
     }
 
-    /* =========================
-       GOOGLE ADS SPACE
-    ========================= */
+    /* ABOUT */
 
-    .ad-section {
-      max-width: 1000px;
-      margin: 25px auto 0;
-      padding: 0 25px;
+    .about-section {
+      background: #f5e9e6;
     }
 
-    .ad-box {
-      min-height: 120px;
-      border: 1px dashed #d9c5c1;
-      background: #fffdfc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      border-radius: 12px;
-      color: #9a8985;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-    }
-
-    /*
-      GOOGLE ADSENSE PLACEHOLDER
-
-      When Google AdSense approves your website,
-      replace this area with the official AdSense
-      code provided by Google.
-
-      Do NOT use random ad codes from other websites.
-    */
-
-    /* =========================
-       JOURNAL
-    ========================= */
-
-    .journal-grid {
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
     }
 
-    .journal-card {
-      background: white;
-      border: 1px solid #eaded9;
-      border-radius: 15px;
-      overflow: hidden;
+    .about-image img {
+      height: 430px;
+      border-radius: 12px;
     }
 
-    .journal-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
+    .about-copy h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.15;
+      margin-bottom: 18px;
     }
 
-    .journal-content {
-      padding: 20px;
-    }
-
-    .journal-content small {
-      font-family: Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #a85e68;
-      font-size: 10px;
-    }
-
-    .journal-content h3 {
-      font-size: 22px;
-      font-weight: 500;
-      margin: 8px 0;
-    }
-
-    .journal-content p {
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      color: #766767;
-      margin-bottom: 13px;
-    }
-
-    .journal-content a {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      color: #a85e68;
-      font-weight: bold;
-    }
-
-    /* =========================
-       NEWSLETTER
-    ========================= */
-
-    .newsletter {
-      background: #eed4d5;
-      text-align: center;
-      padding: 65px 25px;
-    }
-
-    .newsletter h2 {
-      font-size: 36px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    .newsletter p {
+    .about-copy p {
+      color: #756363;
       font-family: Arial, sans-serif;
       font-size: 14px;
-      margin-bottom: 22px;
-      color: #685858;
-    }
-
-    .newsletter-form {
-      max-width: 550px;
-      margin: auto;
-      display: flex;
-      background: white;
-      border-radius: 30px;
-      overflow: hidden;
-      border: 1px solid #d4b7b8;
-    }
-
-    .newsletter-form input {
-      flex: 1;
-      border: none;
-      outline: none;
-      padding: 14px 20px;
-      min-width: 0;
-    }
-
-    .newsletter-form button {
-      border: none;
-      background: #a85e68;
-      color: white;
-      padding: 0 22px;
-      cursor: pointer;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #33292a;
-      color: #f9eeeb;
-      padding: 60px 25px 25px;
-    }
-
-    .footer-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.6fr 1fr 1fr 1fr;
-      gap: 40px;
-    }
-
-    .footer-brand h2 {
-      font-size: 27px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    .footer-brand p {
-      max-width: 330px;
-      color: #cdbdbc;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-    }
-
-    .footer-column h3 {
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       margin-bottom: 17px;
     }
 
-    .footer-column a {
-      display: block;
-      color: #cdbdbc;
-      font-family: Arial, sans-serif;
-      font-size: 13px;
-      margin-bottom: 9px;
-    }
-
-    .footer-column a:hover {
-      color: white;
-    }
-
-    /* SOCIAL ICONS */
-
-    .social-icons {
-      display: flex;
-      gap: 9px;
-      margin-top: 18px;
-    }
-
-    .social-icon {
-      width: 38px;
-      height: 38px;
-      border: 1px solid #68595a;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      transition: .2s;
-    }
-
-    .social-icon:hover {
-      background: #a85e68;
-      border-color: #a85e68;
-    }
-
-    .social-icon svg {
-      width: 18px;
-      height: 18px;
-      fill: currentColor;
-    }
-
-    /* PAYMENT GATEWAYS */
-
-    .payment-area {
-      max-width: 1250px;
-      margin: 40px auto 0;
-      padding-top: 25px;
-      border-top: 1px solid #55494a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .payment-area span {
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-      color: #cdbdbc;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .payment-icons {
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-    }
-
-    .payment-card {
-      min-width: 55px;
-      height: 32px;
-      padding: 5px 9px;
-      border-radius: 5px;
-      background: #fff;
-      color: #333;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Arial, sans-serif;
-      font-size: 9px;
-      font-weight: bold;
-    }
-
-    .footer-bottom {
-      max-width: 1250px;
-      margin: 25px auto 0;
-      padding-top: 20px;
-      border-top: 1px solid #55494a;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      color: #a99594;
-      font-family: Arial, sans-serif;
-      font-size: 11px;
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1050px) {
-
-      nav {
-        gap: 14px;
-      }
-
-      .account-button {
-        display: none;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 760px) {
-
-      .topbar {
-        min-height: 70px;
-        padding: 10px 16px;
-      }
-
-      .brand {
-        min-width: auto;
-      }
-
-      .brand-text strong {
-        font-size: 18px;
-      }
-
-      .brand-text span {
-        font-size: 8px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .mobile-menu {
-        display: grid;
-      }
-
-      .header-actions {
-        gap: 6px;
-      }
-
-      .icon-button {
-        width: 37px;
-        height: 37px;
-      }
-
-      .cart-button {
-        padding: 9px 12px;
-        font-size: 11px;
-      }
-
-      .hero {
-        min-height: 600px;
-        background-position: 65% center;
-      }
-
-      .hero-content {
-        padding: 70px 20px;
-      }
-
-      .hero h1 {
-        font-size: 46px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .category-grid,
-      .journal-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .category-card {
-        min-height: 330px;
-      }
-
-      .section {
-        padding: 50px 18px;
-      }
-
-      .section-heading h2,
-      .mission h2 {
-        font-size: 31px;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .product-info {
-        padding: 13px;
-      }
-
-      .product-info h3 {
-        font-size: 14px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 20px;
-      }
-
-      .footer-brand {
-        grid-column: 1 / -1;
-      }
-
-      .newsletter-form {
-        width: 100%;
-      }
-
-      .newsletter-form button {
-        padding: 0 15px;
-      }
-
-      .payment-area {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 430px) {
-
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-      }
-
-      .brand-text strong {
-        font-size: 16px;
-      }
-
-      .brand-text span {
-        display: none;
-      }
-
-      .search-area {
-        padding: 10px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .product-grid {
-        gap: 9px;
-      }
-
-      .product-info h3 {
-        font-size: 13px;
-      }
-
-      .product-info p {
-        font-size: 11px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-brand {
-        grid-column: auto;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-  <div class="topbar">
-
-    <a href="/" class="brand">
-
-      <div class="brand-mark">T</div>
-
-      <div class="brand-text">
-        <strong>Trove Beauty Co.</strong>
-        <span>Beauty • Self-Care • Essentials</span>
-      </div>
-
-    </a>
-
-    <nav>
-      <a href="/">Home</a>
-      <a href="#makeup">Makeup</a>
-      <a href="#beauty-tools">Beauty Tools</a>
-      <a href="#hair-care">Hair Care</a>
-      <a href="#journal">Journal</a>
-      <a href="about.html">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="header-actions">
-
-      <!-- SEARCH -->
-
-      <button
-        class="icon-button"
-        onclick="toggleSearch()"
-        aria-label="Search"
-        title="Search"
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="7"></circle>
-          <line x1="16.5" y1="16.5" x2="22" y2="22"></line>
-        </svg>
-      </button>
-
-      <!-- ACCOUNT -->
-
-      <a
-        href="https://thetradetrove.com/account/login"
-        class="account-button"
-      >
-        Sign in / Create account
-      </a>
-
-      <!-- CART -->
-
-      <a
-        href="https://thetradetrove.com/cart"
-        class="cart-button"
-      >
-        🛒 Cart
-      </a>
-
-      <!-- MOBILE MENU -->
-
-      <button
-        class="icon-button mobile-menu"
-        onclick="toggleMobileMenu()"
-        aria-label="Menu"
-      >
-        ☰
-      </button>
-
-    </div>
-
-  </div>
-
-  <div class="search-area" id="searchArea">
-
-    <form
-      class="search-box"
-      action="https://thetradetrove.com/search"
-      method="get"
-    >
-
-      <input
-        type="search"
-        name="q"
-        placeholder="Search makeup, beauty tools, hair care..."
-        aria-label="Search products"
-      >
-
-      <button type="submit">
-        Search
-      </button>
-
-    </form>
-
-  </div>
-
-</header>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-  <div class="hero-content">
-
-    <div class="eyebrow">
-      Discover Your Beauty Essentials
-    </div>
-
-    <h1>
-      Beauty made simple. Elegance made everyday.
-    </h1>
-
-    <p>
-      Discover thoughtfully selected makeup, hair care, beauty tools,
-      self-care and everyday beauty essentials at Trove Beauty Co.
-    </p>
-
-    <div class="hero-buttons">
-
-      <a
-        href="https://thetradetrove.com/collections/all"
-        class="primary-btn"
-      >
-        Shop Collection
-      </a>
-
-      <a
-        href="#categories"
-        class="secondary-btn"
-      >
-        Explore Beauty
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     MISSION
-========================= -->
-
-<section class="mission" id="about">
-
-  <div class="eyebrow">
-    Our Mission
-  </div>
-
-  <h2>
-    Beauty essentials for everyday confidence.
-  </h2>
-
-  <p>
-    Trove Beauty Co. brings together beauty, self-care, hair care,
-    makeup tools and everyday essentials in one simple online destination.
-    Our goal is to make discovering useful beauty products easy,
-    convenient and enjoyable.
-  </p>
-
-</section>
-
-
-<!-- =========================
-     CATEGORIES
-========================= -->
-
-<section class="section" id="categories">
-
-  <div class="section-heading">
-
-    <div class="eyebrow">
-      Shop By Category
-    </div>
-
-    <h2>
-      Find your beauty favorites
-    </h2>
-
-    <p>
-      Explore our everyday beauty essentials.
-    </p>
-
-  </div>
-
-  <div class="category-grid">
-
-    <article class="category-card" id="makeup">
-
-      <div class="category-content">
-
-        <h3>Makeup</h3>
-
-        <p>
-          Beauty essentials for your everyday look.
-        </p>
-
-        <a href="https://thetradetrove.com/collections/makeup">
-          Shop Makeup →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="category-card" id="beauty-tools">
-
-      <div class="category-content">
-
-        <h3>Beauty Tools</h3>
-
-        <p>
-          Simple tools designed for your beauty routine.
-        </p>
-
-        <a href="beauty-tools.html">   Shop Beauty Tools → </a>
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="category-card" id="hair-care">
-
-      <div class="category-content">
-
-        <h3>Hair Care</h3>
-
-        <p>
-          Everyday essentials for beautiful hair.
-        </p>
-
-        <a href="hair-care.html">   Shop Hair Care → </a>
-        
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     PRODUCTS
-========================= -->
-
-<section class="section products">
-
-  <div class="section-heading">
-
-    <div class="eyebrow">
-      Featured Beauty
-    </div>
-
-    <h2>
-      Everyday favorites
-    </h2>
-
-    <p>
-      Explore selected products from Trove Beauty Co.
-    </p>
-
-  </div>
-
-
-  <div class="product-grid">
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1631214524020-7e18dbf1a8e1?auto=format&fit=crop&w=700&q=80"
-          alt="Makeup beauty product"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <h3>Volumizing Mascara</h3>
-
-        <p>
-          Everyday lash definition and volume.
-        </p>
-
-        <div class="price">
-          $19.99
-        </div>
-
-        <a   class="product-btn"   href="catalog.html"
-        >
-          View Product
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80"
-          alt="Beauty tools"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <h3>Beauty Tools</h3>
-
-        <p>
-          Tools for your daily beauty routine.
-        </p>
-
-        <div class="price">
-          Explore Collection
-        </div>
-
-        <a   class="product-btn"   href="beauty-tools.html"
-        >
-          View Collection
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=80"
-          alt="Hair care product"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <h3>Hair Care Essentials</h3>
-
-        <p>
-          Everyday accessories for your hair routine.
-        </p>
-
-        <div class="price">
-          Explore Collection
-        </div>
-
-        <a   class="product-btn"   href="catalog.html"
-        >
-          View Collection
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="product-card">
-
-      <div class="product-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=700&q=80"
-          alt="Self care beauty product"
-          loading="lazy"
-        >
-
-      </div>
-
-      <div class="product-info">
-
-        <h3>Self-Care Essentials</h3>
-
-        <p>
-          Small essentials for your everyday routine.
-        </p>
-
-        <div class="price">
-          Explore Collection
-        </div>
-
-        <a   class="product-btn"   href="catalog.html"
-        >
-          Shop Now
-        </a>
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     GOOGLE ADS SPACE
-========================= -->
-
-<div class="ad-section">
-
-  <div class="ad-box">
-
-    <span>
-      Advertisement space — Google AdSense can be added here after approval.
-    </span>
-
-  </div>
-
-</div>
-
-
-<!-- =========================
-     BEAUTY JOURNAL
-========================= -->
-
-<section class="section" id="journal">
-
-  <div class="section-heading">
-
-    <div class="eyebrow">
-      Beauty Journal
-    </div>
-
-    <h2>
-      Beauty inspiration & tips
-    </h2>
-
-    <p>
-      Helpful ideas for your everyday beauty routine.
-    </p>
-
-  </div>
-
-
-  <div class="journal-grid">
-
-
-    <article class="journal-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80"
-        alt="Makeup beauty tips"
-        loading="lazy"
-      >
-
-      <div class="journal-content">
-
-        <small>Makeup</small>
-
-        <h3>
-          Simple Everyday Makeup Ideas
-        </h3>
-
-        <p>
-          Discover simple ways to build an effortless everyday beauty routine.
-        </p>
-
-        <a href="#">
-          Read More →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="journal-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=80"
-        alt="Hair care routine"
-        loading="lazy"
-      >
-
-      <div class="journal-content">
-
-        <small>Hair Care</small>
-
-        <h3>
-          Build a Simple Hair Care Routine
-        </h3>
-
-        <p>
-          Easy everyday ideas for caring for your hair and keeping your routine simple.
-        </p>
-
-        <a href="#">
-          Read More →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <article class="journal-card">
-
-      <img
-        src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80"
-        alt="Self care routine"
-        loading="lazy"
-      >
-
-      <div class="journal-content">
-
-        <small>Self-Care</small>
-
-        <h3>
-          Create Your Own Beauty Ritual
-        </h3>
-
-        <p>
-          Turn a few everyday beauty essentials into a relaxing personal ritual.
-        </p>
-
-        <a href="#">
-          Read More →
-        </a>
-
-      </div>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     NEWSLETTER
-========================= -->
-
-<section class="newsletter">
-
-  <div class="eyebrow">
-    Stay In The Trove
-  </div>
-
-  <h2>
-    Beauty updates, new arrivals & offers
-  </h2>
-
-  <p>
-    Join our beauty community for new product updates and inspiration.
-  </p>
-
-  <form
-    class="newsletter-form"
-    action="#"
-    method="post"
-    onsubmit="return newsletterMessage()"
-  >
-
-    <input
-      type="email"
-      placeholder="Your email address"
-      required
-      aria-label="Email address"
-    >
-
-    <button type="submit">
-      Join Us
-    </button>
-
-  </form>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer id="contact">
-
-  <div class="footer-grid">
-
-
-    <!-- BRAND -->
-
-    <div class="footer-brand">
-
-      <h2>
-        Trove Beauty Co.
-      </h2>
-
-      <p>
-        Beauty, self-care, hair care, beauty tools and everyday
-        essentials — thoughtfully brought together for your routine.
-      </p>
-
-
-      <!-- SOCIAL MEDIA -->
-
-      <div class="social-icons">
-
-        <!-- Instagram -->
-
-        <a
-          class="social-icon"
-          href="https://www.instagram.com/trovebeautyco/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Instagram"
-          title="Instagram"
-        >
-
-          <svg viewBox="0 0 24 24">
-            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 12 16a4.5 4.5 0 0 1 0-9zm0 2A2.5 2.5 0 1 0 12 14a2.5 2.5 0 0 0 0-5zm5.25-2.25a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2z"/>
-          </svg>
-
-        </a>
-
-
-        <!-- Facebook -->
-
-        <a
-          class="social-icon"
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener"
-          aria-label="Facebook"
-          title="Facebook"
-        >
-
-          <svg viewBox="0 0 24 24">
-            <path d="M14 8h3V4h-3c-3.1 0-5 1.9-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z"/>
-          </svg>
-
-        </a>
-
-
-        <!-- TikTok -->
-
-        <a
-          class="social-icon"
-          href="#"
-          aria-label="TikTok"
-          title="TikTok"
-        >
-
-          <svg viewBox="0 0 24 24">
-            <path d="M16 2h3c.2 1.7 1.1 3 3 3.6v3.1c-1.2 0-2.3-.4-3.3-1v6.6c0 4-2.7 6.7-6.5 6.7-3.3 0-5.7-2.4-5.7-5.5 0-3.4 2.7-5.8 6.3-5.8.4 0 .7 0 1 .1v3.2c-.3-.1-.7-.2-1-.2-1.6 0-2.9 1-2.9 2.6 0 1.4 1 2.4 2.4 2.4 1.5 0 2.4-1 2.4-2.9V2z"/>
-          </svg>
-
-        </a>
-
-
-        <!-- YouTube -->
-
-        <a
-          class="social-icon"
-          href="#"
-          aria-label="YouTube"
-          title="YouTube"
-        >
-
-          <svg viewBox="0 0 24 24">
-            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.8V8.2l6.5 3.8-6.5 3.8z"/>
-          </svg>
-
-        </a>
-
-
-        <!-- Pinterest -->
-
-        <a
-          class="social-icon"
-          href="#"
-          aria-label="Pinterest"
-          title="Pinterest"
-        >
-
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-1.6 0-3.5.4-5.1l1.1-4.5s-.3-.7-.3-1.7c0-1.6.9-2.8 2-2.8.9 0 1.4.7 1.4 1.5 0 .9-.6 2.2-.9 3.5-.3 1 .5 1.8 1.5 1.8 1.8 0 3.1-1.9 3.1-4.7 0-2.4-1.7-4.1-4.2-4.1-2.8 0-4.5 2.1-4.5 4.3 0 .9.3 1.8.8 2.3.1.1.1.2.1.4l-.3 1.2c-.1.4-.4.5-.7.3-1.3-.6-2.1-2.5-2.1-4 0-3.3 2.4-6.4 7-6.4 3.7 0 6.5 2.6 6.5 6 0 3.6-2.3 6.6-5.4 6.6-1.1 0-2.1-.6-2.5-1.3l-.7 2.7c-.3 1.1-1 2.5-1.5 3.3.9.3 1.9.5 2.9.5A10 10 0 1 0 12 2z"/>
-          </svg>
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- SHOP -->
-
-    <div class="footer-column">
-
-      <h3>Shop</h3>
-
-      <a href="makeup.html">   Makeup </a>
-
-<a href="beauty-tools.html">   Beauty Tools </a>
-
-      <a href="hair-care.html">   Hair Care </a>
-
-      <a href="catalog.html">   Catalog </a>
-
-      <a href="cart.html">   Cart </a>
-
-    </div>
-
-
-    <!-- CUSTOMER -->
-
-    <div class="footer-column">
-
-      <h3>Customer Care</h3>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-      <a href="shipping.html">   Shipping </a>
-
-      <a href="returns.html">   Returns & Refunds </a>
-
-      <a href="privacy.html">   Privacy Policy </a>
-
-      <<a href="terms.html">   Terms of Service </a>
-
-    </div>
-
-
-    <!-- ACCOUNT -->
-
-    <div class="footer-column">
-
-      <h3>My Account</h3>
-
-      <a href="login.html">   Sign In </a>
-
-      <a href="register.html">   Create Account </a>
-
-      <a href="search.html">   Search </a>
-
-      <a href="about.html">
-        About Us
-      </a>
-
-      contact.html
-
-    </div>
-
-  </div>
-
-
-  <!-- PAYMENT GATEWAYS -->
-
-  <div class="payment-area">
-
-    <span>
-      Secure payment options
-    </span>
-
-    <div class="payment-icons">
-
-      <div class="payment-card">
-        VISA
-      </div>
-
-      <div class="payment-card">
-        Mastercard
-      </div>
-
-      <div class="payment-card">
-        AMEX
-      </div>
-
-      <div class="payment-card">
-        PayPal
-      </div>
-
-      <div class="payment-card">
-        Shop Pay
-      </div>
-
-      <div class="payment-card">
-        Google Pay
-      </div>
-
-      <div class="payment-card">
-        Apple Pay
-      </div>
-
-      <div class="payment-card">
-        Venmo
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- COPYRIGHT -->
-
-  <div class="footer-bottom">
-
-    <span>
-      © 2026 Trove Beauty Co. All rights reserved.
-    </span>
-
-    <span>
-      Online Beauty & Self-Care Store
-    </span>
-
-  </div>
-
-</footer>
-
-
-<script>
-
-  /* SEARCH */
-
-  function toggleSearch() {
-
-    const search = document.getElementById("searchArea");
-
-    search.classList.toggle("active");
-
-    if (search.classList.contains("active")) {
-
-      const input = search.querySelector("input");
-
-      setTimeout(function () {
-        input.focus();
-      }, 100);
-
-    }
-
-  }
-
-
-  /* MOBILE MENU */
-
-  function toggleMobileMenu() {
-
-    const nav = document.querySelector("nav");
-
-    if (nav.style.display === "flex") {
-
-      nav.style.display = "";
-
-    } else {
-
-      nav.style.display = "flex";
-      nav.style.flexDirection = "column";
-      nav.style.position = "absolute";
-      nav.style.top = "70px";
-      nav.style.left = "0";
-      nav.style.right = "0";
-      nav.style.background = "#fffaf7";
-      nav.style.padding = "20px";
-      nav.style.borderBottom = "1px solid #eaded9";
-      nav.style.gap = "12px";
-
-    }
-
-  }
-
-
-  /* NEWSLETTER */
-
-  function newsletterMessage() {
-
-    alert(
-      "Thank you for joining Trove Beauty Co.! Newsletter signup will be connected when your email marketing service is ready."
-    );
-
-    return false;
-
-  }
-
-</script>
-
-</body>
-</html>
+    /* JOURNAL

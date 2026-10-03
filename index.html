@@ -8,7 +8,6 @@
 <title>Trove Beauty Co. | Everyday Beauty, Considered</title>
 
 <meta name="description" content="Explore makeup, beauty tools, hair care, and everyday self-care essentials at Trove Beauty Co.">
-
 <meta name="theme-color" content="#faf8f4">
 
 <link rel="canonical" href="https://website.thetradetrove.com/">
@@ -127,7 +126,8 @@ display:grid;
 grid-template-columns:1fr 1fr;
 min-height:510px;
 margin:25px auto;
-background:#e9dfd5
+background:#e9dfd5;
+overflow:hidden
 }
 
 .herotext{
@@ -163,6 +163,10 @@ margin:20px 0 24px
 .heroimg,.heroimg img{
 height:100%;
 min-height:510px
+}
+
+.heroimg img{
+object-position:center;
 }
 
 .btn{
@@ -638,6 +642,12 @@ font-size:10px;
 color:var(--muted)
 }
 
+.empty{
+font-size:12px;
+color:var(--muted);
+padding:20px 0
+}
+
 @media(max-width:900px){
 nav{gap:11px}
 nav a{font-size:8px}
@@ -705,7 +715,7 @@ Thoughtful beauty finds • Everyday self-care
 
 <a class="logo" href="#home">TROVE <em>BEAUTY CO.</em></a>
 
-<button class="menubtn" id="menu">MENU ☰</button>
+<button class="menubtn" id="menu" type="button">MENU ☰</button>
 
 <nav id="nav">
 <a href="#home">Home</a>
@@ -718,8 +728,8 @@ Thoughtful beauty finds • Everyday self-care
 </nav>
 
 <div class="actions">
-<button class="icon" id="searchBtn" aria-label="Search">⌕</button>
-<button class="icon" id="cartBtn" aria-label="Cart">♧<span class="count" id="count">0</span></button>
+<button class="icon" id="searchBtn" type="button" aria-label="Search">⌕</button>
+<button class="icon" id="cartBtn" type="button" aria-label="Cart">♧<span class="count" id="count">0</span></button>
 </div>
 
 </div>
@@ -736,7 +746,11 @@ Thoughtful beauty finds • Everyday self-care
 </div>
 
 <div class="heroimg">
-<img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=1300&q=85" alt="Beauty editorial portrait">
+<img
+src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=1300&q=85"
+alt="Beauty editorial portrait"
+fetchpriority="high"
+>
 </div>
 </section>
 
@@ -752,7 +766,7 @@ Thoughtful beauty finds • Everyday self-care
 <div class="cats">
 
 <a class="cat" id="makeup" href="#shop">
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85" alt="Makeup collection">
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85" alt="Makeup collection" loading="lazy">
 <div class="catlabel">
 <small>Color and creativity</small>
 <h3>Makeup</h3>
@@ -761,7 +775,7 @@ Explore ↗
 </a>
 
 <a class="cat" id="tools" href="#shop">
-<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85" alt="Beauty tools">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85" alt="Beauty tools" loading="lazy">
 <div class="catlabel">
 <small>Your beauty kit</small>
 <h3>Beauty Tools</h3>
@@ -770,7 +784,7 @@ Explore ↗
 </a>
 
 <a class="cat" id="hair" href="#shop">
-<img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=85" alt="Hair care">
+<img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=85" alt="Hair care" loading="lazy">
 <div class="catlabel">
 <small>Care and comfort</small>
 <h3>Hair Care</h3>
@@ -799,7 +813,7 @@ Explore ↗
 
 <section class="section wrap" id="story">
 <div class="split">
-<img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1100&q=85" alt="Self care products">
+<img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1100&q=85" alt="Self care products" loading="lazy">
 
 <div class="splitcopy">
 <div class="eyebrow">A little time for you</div>
@@ -832,19 +846,19 @@ Explore ↗
 
 <div class="cats">
 <article>
-<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=85" alt="Makeup inspiration">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=85" alt="Makeup inspiration" loading="lazy">
 <h3>Building a simple everyday makeup routine</h3>
 <p class="intro">Begin with products and looks that feel comfortable for you.</p>
 </article>
 
 <article>
-<img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=85" alt="Self care">
+<img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=85" alt="Self care" loading="lazy">
 <h3>Making room for a small self-care ritual</h3>
 <p class="intro">Small moments can make a routine feel intentional.</p>
 </article>
 
 <article>
-<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85" alt="Hair care inspiration">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=85" alt="Hair care inspiration" loading="lazy">
 <h3>Practical ideas for daily hair care</h3>
 <p class="intro">Explore everyday accessories and useful routines.</p>
 </article>
@@ -858,29 +872,29 @@ Explore ↗
 
 <div class="pagegrid">
 <div>
-<p>Email: <a href="mailto:contact@thetradetrove.com">contact@thetradetrove.com</a></p>
+<p>Email: <a href="mailto:contacts@thetradetrove.com">contacts@thetradetrove.com</a></p>
 <p>Instagram: <a href="https://www.instagram.com/trovebeautyco/" target="_blank" rel="noopener">@trovebeautyco</a></p>
 <p class="muted">Contact form is a frontend demo and does not send messages.</p>
 </div>
 
 <form id="contactForm">
 <div class="field">
-<label>Name</label>
-<input required placeholder="Your name">
+<label for="contactName">Name</label>
+<input id="contactName" name="name" required placeholder="Your name">
 </div>
 
 <div class="field">
-<label>Email</label>
-<input type="email" required placeholder="Your email">
+<label for="contactEmail">Email</label>
+<input id="contactEmail" name="email" type="email" required placeholder="Your email">
 </div>
 
 <div class="field">
-<label>Message</label>
-<textarea required placeholder="How can we help?"></textarea>
+<label for="contactMessage">Message</label>
+<textarea id="contactMessage" name="message" required placeholder="How can we help?"></textarea>
 </div>
 
-<button class="btn">Preview message</button>
-<p id="contactMsg" class="muted"></p>
+<button class="btn" type="submit">Preview message</button>
+<p id="contactMsg" class="muted" aria-live="polite"></p>
 </form>
 </div>
 </section>
@@ -893,7 +907,7 @@ Explore ↗
 
 <form class="signup" id="signup">
 <input type="email" required placeholder="Your email address" aria-label="Email address">
-<button>JOIN ↗</button>
+<button type="submit">JOIN ↗</button>
 </form>
 
 <p id="signupMsg" aria-live="polite"></p>
@@ -938,7 +952,7 @@ Explore ↗
 <span>Shop Pay*</span>
 </div>
 <p>*Visual examples only. No payment gateway is connected.</p>
-<a href="mailto:contact@thetradetrove.com">contact@thetradetrove.com</a>
+<a href="mailto:contacts@thetradetrove.com">contacts@thetradetrove.com</a>
 </div>
 
 </div>
@@ -953,10 +967,10 @@ Explore ↗
 
 <div class="overlay" id="overlay"></div>
 
-<aside class="drawer" id="drawer">
+<aside class="drawer" id="drawer" aria-label="Shopping bag">
 <div class="drawhead">
 <h3>Your bag</h3>
-<button class="close" id="closeCart" aria-label="Close cart">×</button>
+<button class="close" id="closeCart" type="button" aria-label="Close cart">×</button>
 </div>
 
 <div class="drawbody" id="cartLines"></div>
@@ -967,27 +981,27 @@ Explore ↗
 <span id="subtotal">$0.00</span>
 </div>
 <p class="muted">Demo cart only. No order or payment is submitted.</p>
-<button class="btn" id="checkout">Checkout preview</button>
+<button class="btn" id="checkout" type="button">Checkout preview</button>
 </div>
 </aside>
 
-<div class="modal" id="welcome">
+<div class="modal" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
 <div class="modalbox">
-<button class="close" id="dismiss" aria-label="Close popup">×</button>
+<button class="close" id="dismiss" type="button" aria-label="Close popup">×</button>
 <div class="eyebrow">A note from Trove</div>
-<h2>Welcome to your beauty edit.</h2>
+<h2 id="welcomeTitle">Welcome to your beauty edit.</h2>
 <p>Sign up for product notes and store updates. This preview does not transmit or save your email.</p>
 
 <form id="popupForm">
 <div class="field">
 <input type="email" required placeholder="Email address" aria-label="Email address">
 </div>
-<button class="btn">Sign up</button>
+<button class="btn" type="submit">Sign up</button>
 </form>
 </div>
 </div>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 const products=[
@@ -1041,16 +1055,35 @@ img:'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fi
 }
 ];
 
-let cart=JSON.parse(sessionStorage.getItem('troveCart')||'[]');
+let cart=[];
+
+try{
+const saved=JSON.parse(sessionStorage.getItem('troveCart')||'[]');
+if(Array.isArray(saved)){
+cart=saved.filter(x=>
+x &&
+typeof x.id==='string' &&
+typeof x.name==='string' &&
+Number.isFinite(x.price) &&
+Number.isFinite(x.qty) &&
+x.qty>0
+);
+}
+}catch(error){
+cart=[];
+}
 
 const $=s=>document.querySelector(s);
 const money=n=>'$'+n.toFixed(2);
 
+let toastTimer;
+
 function toast(s){
-let t=$('#toast');
+const t=$('#toast');
 t.textContent=s;
 t.classList.add('show');
-setTimeout(()=>t.classList.remove('show'),2200);
+clearTimeout(toastTimer);
+toastTimer=setTimeout(()=>t.classList.remove('show'),2200);
 }
 
 function render(){
@@ -1068,16 +1101,20 @@ $('#cartLines').innerHTML=cart.length
 <h4>${x.name}</h4>
 <small>${x.source} · ${money(x.price)}</small>
 <div class="qty">
-<button data-dec="${x.id}">−</button>
+<button type="button" aria-label="Decrease ${x.name}" data-dec="${x.id}">−</button>
 ${x.qty}
-<button data-inc="${x.id}">+</button>
+<button type="button" aria-label="Increase ${x.name}" data-inc="${x.id}">+</button>
 </div>
 </div>
 <b>${money(x.price*x.qty)}</b>
 </div>`).join('')
 :'<div class="empty">Your bag is empty.</div>';
 
+try{
 sessionStorage.setItem('troveCart',JSON.stringify(cart));
+}catch(error){
+console.warn('Cart could not be saved for this session.');
+}
 }
 
 function card(p){
@@ -1091,7 +1128,7 @@ return `
 <h3>${p.name}</h3>
 <p>${p.category}</p>
 <div class="price">${money(p.price)}</div>
-<button class="add" data-add="${p.id}">Add to bag</button>
+<button class="add" type="button" data-add="${p.id}">Add to bag</button>
 </div>
 </article>`;
 }
@@ -1110,71 +1147,83 @@ $('#nav').classList.remove('open');
 });
 
 document.addEventListener('click',e=>{
-let a=e.target.closest('[data-add]');
+const add=e.target.closest('[data-add]');
 
-if(a){
-let p=products.find(x=>x.id===a.dataset.add);
-let f=cart.find(x=>x.id===p.id);
+if(add){
+const p=products.find(x=>x.id===add.dataset.add);
+if(!p)return;
 
-f?f.qty++:cart.push({...p,qty:1});
+const found=cart.find(x=>x.id===p.id);
+
+if(found)found.qty++;
+else cart.push({...p,qty:1});
 
 render();
 toast('Added to demo bag');
 }
 
-let inc=e.target.closest('[data-inc]');
+const inc=e.target.closest('[data-inc]');
 
 if(inc){
-let x=cart.find(y=>y.id===inc.dataset.inc);
+const x=cart.find(y=>y.id===inc.dataset.inc);
 if(x)x.qty++;
 render();
 }
 
-let dec=e.target.closest('[data-dec]');
+const dec=e.target.closest('[data-dec]');
 
 if(dec){
-let x=cart.find(y=>y.id===dec.dataset.dec);
+const x=cart.find(y=>y.id===dec.dataset.dec);
 if(x)x.qty--;
 cart=cart.filter(y=>y.qty>0);
 render();
 }
 });
 
-function open(){
+function openCart(){
 render();
 $('#drawer').classList.add('open');
 $('#overlay').classList.add('show');
 document.body.classList.add('lock');
 }
 
-function close(){
+function closeCart(){
 $('#drawer').classList.remove('open');
 $('#overlay').classList.remove('show');
 document.body.classList.remove('lock');
 }
 
-$('#cartBtn').addEventListener('click',open);
-$('#closeCart').addEventListener('click',close);
-$('#overlay').addEventListener('click',close);
+$('#cartBtn').addEventListener('click',openCart);
+$('#closeCart').addEventListener('click',closeCart);
+$('#overlay').addEventListener('click',closeCart);
+
+document.addEventListener('keydown',e=>{
+if(e.key==='Escape'){
+closeCart();
+dismissPopup();
+$('#nav').classList.remove('open');
+}
+});
 
 $('#checkout').addEventListener('click',()=>{
 toast('Demo only: no order or payment was submitted.');
 });
 
 $('#searchBtn').addEventListener('click',()=>{
-let q=prompt('Search products');
+const q=prompt('Search products');
 
 if(q){
-let matches=products.filter(p=>
+const matches=products.filter(p=>
 (p.name+' '+p.category+' '+p.source)
 .toLowerCase()
-.includes(q.toLowerCase())
+.includes(q.trim().toLowerCase())
 );
 
-$('#shop').scrollIntoView();
+$('#shop').scrollIntoView({behavior:'smooth'});
 
 $('#productGrid').innerHTML=
-matches.map(card).join()||'<p>No matching products.</p>';
+matches.map(card).join('')||
+'<p class="muted">No matching products found.</p>';
 }
 });
 
@@ -1194,19 +1243,21 @@ e.preventDefault();
 $('#contactMsg').textContent='Demo only; message not sent. Please use the email link.';
 });
 
+function dismissPopup(){
+$('#welcome').classList.remove('show');
+try{
+sessionStorage.setItem('trovePopupSeen','1');
+}catch(error){}
+}
+
 if(!sessionStorage.getItem('trovePopupSeen')){
 setTimeout(()=>{
 $('#welcome').classList.add('show');
 },5000);
 }
 
-function dismiss(){
-$('#welcome').classList.remove('show');
-sessionStorage.setItem('trovePopupSeen','1');
-}
-
-$('#dismiss').addEventListener('click',dismiss);
-$('#popupForm').addEventListener('submit',dismiss);
+$('#dismiss').addEventListener('click',dismissPopup);
+$('#popupForm').addEventListener('submit',dismissPopup);
 
 render();
 </script>

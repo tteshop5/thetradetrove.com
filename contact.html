@@ -1,570 +1,678 @@
-```html
+
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Contact Us | Trove Beauty Co.</title>
+<title>Contact Trove Beauty Co. | Beauty & Self-Care</title>
 
-  <meta name="description" content="Contact Trove Beauty Co. for questions about beauty products, orders, shipping, returns, and customer support.">
+<meta name="description" content="Contact Trove Beauty Co. with questions about products, orders, shipping, returns and everyday beauty essentials.">
 
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://thetradetrove.com/contact.html">
+<link rel="canonical" href="https://website.thetradetrove.com/contact.html">
 
-  <meta property="og:title" content="Contact Trove Beauty Co.">
-  <meta property="og:description" content="Get in touch with Trove Beauty Co. for beauty product and order support.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thetradetrove.com/contact.html">
+<style>
+:root {
+  --ink:#29231f;
+  --paper:#faf8f4;
+  --rose:#95685d;
+  --line:#e7dfd6;
+  --muted:#766e67;
+}
 
-  <link rel="stylesheet" href="style.css">
+* {
+  box-sizing:border-box;
+}
 
-  <style>
-    .contact-page {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 70px 20px;
-    }
+body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Arial,sans-serif;
+}
 
-    .contact-hero {
-      text-align: center;
-      margin-bottom: 55px;
-    }
+a {
+  color:inherit;
+  text-decoration:none;
+}
 
-    .contact-hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      margin-bottom: 15px;
-    }
+.top {
+  background:var(--ink);
+  color:white;
+  text-align:center;
+  padding:9px;
+  font-size:11px;
+  letter-spacing:1px;
+}
 
-    .contact-hero p {
-      max-width: 680px;
-      margin: 0 auto;
-      line-height: 1.8;
-      opacity: .8;
-    }
+header {
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  padding:20px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.35fr;
-      gap: 35px;
-      align-items: start;
-    }
+.logo {
+  font-size:17px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
 
-    .contact-card {
-      padding: 32px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.75);
-      box-shadow: 0 15px 45px rgba(0,0,0,.07);
-    }
+.logo span {
+  color:var(--rose);
+}
 
-    .contact-card h2 {
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
+nav {
+  display:flex;
+  gap:20px;
+  font-size:12px;
+}
 
-    .contact-info {
-      display: grid;
-      gap: 22px;
-      margin-top: 25px;
-    }
+nav a:hover,
+nav a.active {
+  color:var(--rose);
+}
 
-    .contact-item {
-      display: flex;
-      gap: 15px;
-      align-items: flex-start;
-    }
+.hero {
+  background:#eee5dc;
+  padding:75px 20px;
+  text-align:center;
+}
 
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f3e9ed;
-      font-size: 19px;
-      flex-shrink: 0;
-    }
+.eyebrow {
+  color:var(--rose);
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
 
-    .contact-item strong {
-      display: block;
-      margin-bottom: 4px;
-    }
+h1,
+h2 {
+  font-family:Georgia,serif;
+  font-weight:400;
+}
 
-    .contact-item span,
-    .contact-item a {
-      line-height: 1.6;
-      opacity: .75;
-      word-break: break-word;
-    }
+h1 {
+  font-size:clamp(40px,7vw,65px);
+  margin:15px 0;
+}
 
-    .contact-form {
-      display: grid;
-      gap: 18px;
-    }
+.hero p {
+  color:var(--muted);
+  font-size:14px;
+  margin:0 auto;
+  max-width:600px;
+  line-height:1.7;
+}
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
+.container {
+  width:min(1050px,92%);
+  margin:auto;
+}
 
-    .form-group {
-      display: grid;
-      gap: 8px;
-    }
+.contact {
+  padding:60px 0 80px;
+}
 
-    .form-group label {
-      font-weight: 600;
-      font-size: .95rem;
-    }
+.contact-intro {
+  text-align:center;
+  margin-bottom:40px;
+}
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 14px 15px;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      background: #fff;
-      font: inherit;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-    }
+.contact-intro h2 {
+  font-size:38px;
+  margin:12px 0;
+}
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: #999;
-      box-shadow: 0 0 0 3px rgba(0,0,0,.05);
-    }
+.contact-intro p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+  max-width:650px;
+  margin:auto;
+}
 
-    .form-group textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:25px;
+}
 
-    .submit-button {
-      border: 0;
-      padding: 15px 25px;
-      border-radius: 999px;
-      background: #111;
-      color: #fff;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: transform .2s, opacity .2s;
-    }
+.card {
+  background:white;
+  border:1px solid var(--line);
+  padding:30px;
+}
 
-    .submit-button:hover {
-      transform: translateY(-2px);
-      opacity: .9;
-    }
+.card h2 {
+  font-size:28px;
+  margin:0 0 20px;
+}
 
-    .form-note {
-      font-size: .85rem;
-      opacity: .65;
-      line-height: 1.6;
-    }
+.card p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+}
 
-    .faq-section {
-      margin-top: 70px;
-    }
+.contact-details {
+  margin-top:30px;
+}
 
-    .faq-section > h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.detail {
+  border-top:1px solid var(--line);
+  padding:18px 0;
+}
 
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+.detail:last-child {
+  border-bottom:1px solid var(--line);
+}
 
-    .faq-item {
-      padding: 25px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.7);
-      box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    }
+.detail-label {
+  color:var(--rose);
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
 
-    .faq-item h3 {
-      font-size: 1.05rem;
-      margin-top: 0;
-    }
+.detail-value {
+  font-size:13px;
+}
 
-    .faq-item p {
-      line-height: 1.7;
-      opacity: .75;
-      margin-bottom: 0;
-    }
+.detail-value a:hover {
+  color:var(--rose);
+}
 
-    .contact-success {
-      display: none;
-      padding: 15px 18px;
-      border-radius: 12px;
-      background: #edf8ef;
-      color: #245b2c;
-      line-height: 1.6;
-    }
+form {
+  display:grid;
+  gap:16px;
+}
 
-    @media (max-width: 800px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+.form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
 
-      .faq-grid {
-        grid-template-columns: 1fr;
-      }
+label {
+  display:block;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
 
-      .form-row {
-        grid-template-columns: 1fr;
-      }
+input,
+select,
+textarea {
+  width:100%;
+  border:1px solid var(--line);
+  background:var(--paper);
+  padding:13px;
+  color:var(--ink);
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  outline:none;
+}
 
-      .contact-page {
-        padding: 50px 16px;
-      }
-    }
-  </style>
+input:focus,
+select:focus,
+textarea:focus {
+  border-color:var(--rose);
+}
+
+textarea {
+  min-height:140px;
+  resize:vertical;
+}
+
+.submit {
+  width:100%;
+  background:var(--ink);
+  color:white;
+  border:0;
+  padding:14px;
+  cursor:pointer;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.submit:hover {
+  background:var(--rose);
+}
+
+.demo-message {
+  display:none;
+  background:#eee5dc;
+  padding:15px;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.note {
+  background:#eee5dc;
+  text-align:center;
+  padding:45px 20px;
+  margin-top:10px;
+}
+
+.note h2 {
+  font-size:32px;
+  margin:12px 0;
+}
+
+.note p {
+  color:var(--muted);
+  font-size:13px;
+}
+
+footer {
+  background:var(--ink);
+  color:white;
+  padding:40px 5%;
+  text-align:center;
+  font-size:11px;
+}
+
+footer p {
+  color:#c9c0b8;
+}
+
+footer a:hover {
+  color:white;
+}
+
+@media(max-width:750px) {
+
+  header {
+    flex-wrap:wrap;
+  }
+
+  nav {
+    width:100%;
+    justify-content:space-between;
+    gap:8px;
+  }
+
+  nav a {
+    font-size:10px;
+  }
+
+  .hero {
+    padding:55px 15px;
+  }
+
+  .contact-grid {
+    grid-template-columns:1fr;
+  }
+
+  .form-row {
+    grid-template-columns:1fr;
+  }
+
+  .contact {
+    padding:45px 0 60px;
+  }
+}
+
+@media(max-width:500px) {
+
+  .card {
+    padding:22px;
+  }
+
+  .contact-intro h2 {
+    font-size:32px;
+  }
+
+  .note h2 {
+    font-size:28px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <a href="index.html" class="logo">
-        Trove Beauty Co.
-      </a>
-
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="makeup.html">Makeup</a>
-        <a href="beauty-tools.html">Beauty Tools</a>
-        <a href="catalog.html">Catalog</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" aria-current="page">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-
-  <!-- MAIN CONTENT -->
-  <main class="contact-page">
-
-    <section class="contact-hero">
-      <p style="font-weight:700; letter-spacing:.08em; text-transform:uppercase;">
-        We're Here to Help
-      </p>
-
-      <h1>Contact Trove Beauty Co.</h1>
-
-      <p>
-        Have a question about a product, order, shipping, returns, or anything
-        else? Send us a message and we'll be happy to help.
-      </p>
-    </section>
-
-
-    <section class="contact-grid">
-
-      <!-- CONTACT INFORMATION -->
-      <div class="contact-card">
-
-        <h2>Get in Touch</h2>
-
-        <p>
-          We value every customer and aim to make your shopping experience
-          simple, helpful, and enjoyable.
-        </p>
-
-        <div class="contact-info">
-
-          <div class="contact-item">
-            <div class="contact-icon">✉</div>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:tradebeautyco@outlook.com">
-                tradebeautyco@outlook.com
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">🛍</div>
-            <div>
-              <strong>Online Store</strong>
-              <span>
-                Shop Trove Beauty Co. online anytime.
-              </span>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">📦</div>
-            <div>
-              <strong>Order Support</strong>
-              <span>
-                Please include your order information when contacting us
-                about an existing order.
-              </span>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">💗</div>
-            <div>
-              <strong>Customer Care</strong>
-              <span>
-                We're here to help with product and shopping questions.
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- CONTACT FORM -->
-      <div class="contact-card">
-
-        <h2>Send Us a Message</h2>
+<div class="top">
+THOUGHTFUL BEAUTY FINDS • EVERYDAY SELF-CARE
+</div>
 
-        <form
-          class="contact-form"
-          id="contactForm"
-          onsubmit="showContactMessage(event)"
-        >
+<header>
 
-          <div class="form-row">
+<a class="logo" href="https://website.thetradetrove.com/">
+TROVE <span>BEAUTY CO.</span>
+</a>
 
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Enter your name"
-                required
-              >
-            </div>
+<nav>
+<a href="https://website.thetradetrove.com/">HOME</a>
+<a href="https://website.thetradetrove.com/shop.html">SHOP</a>
+<a href="https://website.thetradetrove.com/#about">ABOUT</a>
+<a class="active" href="https://website.thetradetrove.com/contact.html">CONTACT</a>
+</nav>
 
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                required
-              >
-            </div>
+</header>
 
-          </div>
 
+<section class="hero">
 
-          <div class="form-group">
+<div class="eyebrow">
+The Trove Connection
+</div>
 
-            <label for="topic">What can we help with?</label>
+<h1>We'd Love to Hear From You.</h1>
 
-            <select id="topic" name="topic" required>
+<p>
+Questions about a product, order, shipping or your shopping experience?
+Send us a message and we'll be happy to help.
+</p>
 
-              <option value="">Select a topic</option>
-              <option value="product-question">Product Question</option>
-              <option value="order-support">Order Support</option>
-              <option value="shipping">Shipping</option>
-              <option value="returns">Returns & Refunds</option>
-              <option value="general">General Question</option>
+</section>
 
-            </select>
 
-          </div>
+<main class="container contact">
 
+<div class="contact-intro">
 
-          <div class="form-group">
+<div class="eyebrow">
+Get in touch
+</div>
 
-            <label for="order">Order Number (Optional)</label>
+<h2>How Can We Help?</h2>
 
-            <input
-              type="text"
-              id="order"
-              name="order"
-              placeholder="Example: #1001"
-            >
+<p>
+Trove Beauty Co. is here to make discovering beauty and self-care
+products simple and enjoyable. Reach out whenever you need assistance.
+</p>
 
-          </div>
+</div>
 
 
-          <div class="form-group">
+<div class="contact-grid">
 
-            <label for="message">Message</label>
 
-            <textarea
-              id="message"
-              name="message"
-              placeholder="How can we help you?"
-              required
-            ></textarea>
+<!-- CONTACT INFORMATION -->
 
-          </div>
+<section class="card">
 
+<div class="eyebrow">
+Customer Care
+</div>
 
-          <button type="submit" class="submit-button">
-            Send Message
-          </button>
+<h2>Let's Connect.</h2>
 
+<p>
+For product questions, order support, shipping questions or general
+inquiries, contact us using the information below.
+</p>
 
-          <div class="contact-success" id="contactSuccess">
-            <strong>Thank you!</strong>
-            Your message has been prepared successfully.
-            <br>
-            Please use the email shown above to contact Trove Beauty Co.
-          </div>
 
+<div class="contact-details">
 
-          <p class="form-note">
-            This contact form is currently a front-end demonstration.
-            Messages are not automatically sent to our inbox yet.
-          </p>
+<div class="detail">
 
-        </form>
+<div class="detail-label">
+Email
+</div>
 
-      </div>
+<div class="detail-value">
+<a href="mailto:tradebeautyco@outlook.com">
+tradebeautyco@outlook.com
+</a>
+</div>
 
-    </section>
+</div>
 
 
-    <!-- FAQ -->
-    <section class="faq-section">
+<div class="detail">
 
-      <h2>Frequently Asked Questions</h2>
+<div class="detail-label">
+Online Store
+</div>
 
-      <div class="faq-grid">
+<div class="detail-value">
+<a href="https://website.thetradetrove.com/">
+website.thetradetrove.com
+</a>
+</div>
 
-        <article class="faq-item">
+</div>
 
-          <h3>How can I check my order?</h3>
 
-          <p>
-            If you have already placed an order, keep your order confirmation
-            available when contacting customer support so we can assist you.
-          </p>
+<div class="detail">
 
-        </article>
+<div class="detail-label">
+Order Support
+</div>
 
+<div class="detail-value">
+Please include your order number when contacting us about an existing order.
+</div>
 
-        <article class="faq-item">
+</div>
 
-          <h3>How long does shipping take?</h3>
 
-          <p>
-            Shipping times depend on the selected shipping method and the
-            destination. Please check the shipping information provided during
-            checkout.
-          </p>
+<div class="detail">
 
-        </article>
+<div class="detail-label">
+Response
+</div>
 
+<div class="detail-value">
+We aim to provide helpful customer support as soon as possible.
+</div>
 
-        <article class="faq-item">
+</div>
 
-          <h3>Can I return an item?</h3>
+</div>
 
-          <p>
-            Please review our Return & Refund policy for the applicable
-            requirements, timeframes, and conditions.
-          </p>
+</section>
 
-        </article>
 
+<!-- CONTACT FORM -->
 
-        <article class="faq-item">
+<section class="card">
 
-          <h3>How do I ask about a product?</h3>
+<div class="eyebrow">
+Send a Message
+</div>
 
-          <p>
-            Use the contact form above and select "Product Question."
-            Include the product name and your question so we can assist you.
-          </p>
+<h2>Contact Us.</h2>
 
-        </article>
 
-      </div>
+<form id="contactForm">
 
-    </section>
+<div class="form-row">
 
-  </main>
+<div>
+<label for="name">Name</label>
 
+<input
+type="text"
+id="name"
+name="name"
+placeholder="Your name"
+required>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
 
-    <div class="container">
+<div>
+<label for="email">Email</label>
 
-      <div>
-        <strong>Trove Beauty Co.</strong>
-        <p>
-          Beauty, self-care, hair care, beauty tools,
-          and everyday essentials.
-        </p>
-      </div>
+<input
+type="email"
+id="email"
+name="email"
+placeholder="you@example.com"
+required>
+</div>
 
-      <div>
-        <strong>Quick Links</strong>
-        <p>
-          <a href="index.html">Home</a><br>
-          <a href="catalog.html">Catalog</a><br>
-          <a href="about.html">About</a><br>
-          <a href="contact.html">Contact</a>
-        </p>
-      </div>
+</div>
 
-      <div>
-        <strong>Customer Care</strong>
-        <p>
-          <a href="shipping.html">Shipping</a><br>
-          <a href="returns.html">Returns & Refunds</a><br>
-          <a href="privacy.html">Privacy Policy</a><br>
-          <a href="terms.html">Terms & Conditions</a>
-        </p>
-      </div>
 
-    </div>
+<div>
 
-    <div style="text-align:center; padding:20px 15px; opacity:.7;">
-      © <span id="year"></span> Trove Beauty Co. All rights reserved.
-    </div>
+<label for="topic">Topic</label>
 
-  </footer>
+<select id="topic" name="topic" required>
 
+<option value="">Select a topic</option>
 
-  <script>
+<option value="product">
+Product Question
+</option>
 
-    /* Current year */
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+<option value="order">
+Order Support
+</option>
 
+<option value="shipping">
+Shipping
+</option>
 
-    /* Demo contact form */
-    function showContactMessage(event) {
+<option value="returns">
+Returns & Refunds
+</option>
 
-      event.preventDefault();
+<option value="general">
+General Question
+</option>
 
-      const success =
-        document.getElementById("contactSuccess");
+</select>
 
-      success.style.display = "block";
+</div>
 
-      success.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
 
-    }
+<div>
 
-  </script>
+<label for="order">
+Order Number
+</label>
+
+<input
+type="text"
+id="order"
+name="order"
+placeholder="Optional">
+</div>
+
+
+<div>
+
+<label for="message">
+Message
+</label>
+
+<textarea
+id="message"
+name="message"
+placeholder="How can we help?"
+required></textarea>
+
+</div>
+
+
+<button class="submit" type="submit">
+Send Message
+</button>
+
+
+<div class="demo-message" id="demoMessage">
+
+<strong>Thank you for contacting Trove Beauty Co.</strong>
+
+<br><br>
+
+This form is currently a website preview and is not connected
+to a live email service yet.
+
+<br><br>
+
+For now, please email us directly at
+<a href="mailto:tradebeautyco@outlook.com">
+tradebeautyco@outlook.com
+</a>.
+
+</div>
+
+</form>
+
+</section>
+
+</div>
+
+</main>
+
+
+<section class="note">
+
+<div class="eyebrow">
+A little note from Trove
+</div>
+
+<h2>Beauty, at your own pace.</h2>
+
+<p>
+Discover products that complement your everyday routine.
+</p>
+
+</section>
+
+
+<footer>
+
+<strong>TROVE BEAUTY CO.</strong>
+
+<p>
+Beauty • Self-Care • Everyday Essentials
+</p>
+
+<p>
+<a href="https://www.instagram.com/trovebeautyco/">
+Instagram @trovebeautyco
+</a>
+</p>
+
+<p>
+© <span id="year"></span> Trove Beauty Co.
+</p>
+
+<p>
+Store preview — live checkout is not connected.
+</p>
+
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+document.getElementById("contactForm").addEventListener(
+"submit",
+function(event) {
+
+event.preventDefault();
+
+document.getElementById("demoMessage").style.display =
+"block";
+
+document.getElementById("demoMessage").scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+);
+
+</script>
 
 </body>
 </html>
